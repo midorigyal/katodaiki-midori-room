@@ -12,21 +12,31 @@
   </head>
 
   <body>
+    <!-- HEADER -->
+
     <header class="header">
       <div class="logo">KD🌱</div>
 
       <nav>
         <a href="#profile">PROFILE</a>
         <a href="#movie">MOVIE</a>
+        <a href="#gallery">GALLERY</a>
         <a href="#vote">VOTE</a>
-        <a href="#about">ABOUT</a>
       </nav>
     </header>
 
+    <!-- HERO -->
+
     <section class="hero">
-      <video autoplay muted loop playsinline>
-        <source src="https://youtu.be/Wr1T3XZaMus?si=dzPtc5w2Rpaz-yuo" />
-      </video>
+      <iframe
+        class="hero-video"
+        src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1&mute=1&controls=0&loop=1&playlist=VIDEO_ID"
+        title="YouTube video player"
+        frameborder="0"
+        allow="autoplay"
+        allowfullscreen
+      >
+      </iframe>
 
       <div class="overlay"></div>
 
@@ -40,84 +50,128 @@
 
         <p class="hero-sub">MIDORI ROOM 🌱</p>
 
-        <p class="hero-text">日プのギャル、 加藤大樹を全力応援中💚</p>
+        <p class="hero-text">
+          日プのギャル、<br />
+          加藤大樹を全力応援中💚
+        </p>
 
         <div class="hero-buttons">
-          <a class="main-btn" href="#vote">VOTE NOW</a>
-          <a class="sub-btn" href="#profile">PROFILE</a>
+          <a class="main-btn" href="#vote"> VOTE NOW </a>
+
+          <a class="sub-btn" href="#profile"> PROFILE </a>
         </div>
       </div>
     </section>
 
-    <section id="profile" class="profile section">
+    <!-- PROFILE -->
+    <section id="profile" class="section">
       <h2>PROFILE</h2>
-
       <div class="profile-grid">
         <div class="profile-card fade-up">
           <h3>BASIC</h3>
-          <p>誕生日：○月○日</p>
-          <p>MBTI：XXXX</p>
-          <p>趣味：ダンス</p>
+          <p>生年月日：2004/10/08</p>
+          <p>出身地：愛知県</p>
+          <p>身長：178cm</p>
+          <p>MBTI：ENTP</p>
         </div>
-
         <div class="profile-card fade-up">
-          <h3>CHARM</h3>
-          <p>#愛されギャル</p>
-          <p>#努力家</p>
-          <p>#表情管理</p>
+          <h3>FAVORITE</h3>
+          <p>趣味：衣装作り、メイク、緑色集め</p>
+          <p>特技：パフェ作り</p>
+          <div class="floating-tags">
+            <span>#愛されギャル</span> <span>#努力家</span>
+            <span>#表情管理</span> <span>#中毒性</span> <span>#沼男子</span>
+          </div>
         </div>
-      </div>
-
-      <div class="floating-tags">
-        <span>#ギャル</span>
-        <span>#努力家</span>
-        <span>#中毒性</span>
-        <span>#沼男子</span>
       </div>
     </section>
 
-    <section id="movie" class="movie section">
+    <!-- MOVIE -->
+    <section id="movie" class="section">
       <h2>MOVIE 💚</h2>
-
       <div class="movie-grid">
+        <!-- チッケム -->
         <div class="movie-card fade-up">
           <iframe
-            src="https://youtu.be/Wr1T3XZaMus?si=dzPtc5w2Rpaz-yuo"
+            src="https://www.youtube.com/embed/Wr1T3XZaMus"
             title="YouTube video player"
             frameborder="0"
             allowfullscreen
           >
           </iframe>
-
-          <p>加藤大樹 チッケム</p>
+          <p>🎥 チッケム</p>
         </div>
-
+        <!-- パフォーマンス① -->
         <div class="movie-card fade-up">
           <iframe
-            src="https://youtu.be/646FH20pfDk?si=gLiMcypju6RU4Bd8"
+            src="https://www.youtube.com/embed/646FH20pfDk"
             title="YouTube video player"
             frameborder="0"
             allowfullscreen
           >
           </iframe>
-
-          <p>ステージ映像</p>
+          <p>💚 パフォーマンス動画</p>
+        </div>
+        <!-- パフォーマンス② -->
+        <div class="movie-card fade-up">
+          <iframe
+            src="https://www.youtube.com/embed/Z0PWG4F08JA"
+            title="YouTube video player"
+            frameborder="0"
+            allowfullscreen
+          >
+          </iframe>
+          <p>✨ ステージ映像</p>
+        </div>
+        <!-- PR動画 -->
+        <div class="movie-card fade-up">
+          <iframe
+            src="https://www.youtube.com/embed/1EYxHAgr5Yo"
+            title="YouTube video player"
+            frameborder="0"
+            allowfullscreen
+          >
+          </iframe>
+          <p>🌱 PR動画</p>
         </div>
       </div>
     </section>
+    <!-- GALLERY -->
 
-    <section id="about" class="about section">
+    <section id="gallery" class="section">
+      <h2>GALLERY 📸</h2>
+
+      <div class="gallery-grid">
+        <img src="images/1.jpg" />
+        <img src="images/2.jpg" />
+        <img src="images/3.jpg" />
+        <img src="images/4.jpg" />
+        <img src="images/5.jpg" />
+        <img src="images/6.jpg" />
+        <img src="images/7.jpg" />
+        <img src="images/8.jpg" />
+        <img src="images/9.jpg" />
+        <img src="images/10.jpg" />
+        <img src="images/11.jpg" />
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+
+    <section class="section">
       <h2>ABOUT 日プ</h2>
 
       <div class="about-card fade-up">
         <p>
-          PRODUCE 101 JAPANは 国民投票でデビューメンバーを決める
-          オーディション番組。
+          PRODUCE 101 JAPANは、<br />
+          国民投票でデビューメンバーを決めるオーディション番組💚
         </p>
       </div>
     </section>
 
-    <section class="tremino section">
+    <!-- TREMINO -->
+
+    <section class="section">
       <h2>TREMINO HOW TO</h2>
 
       <div class="step-grid">
@@ -138,8 +192,13 @@
       </div>
     </section>
 
+    <!-- VOTE -->
+
     <section id="vote" class="vote">
-      <h2>今日の1票で 未来を変えよう🌱</h2>
+      <h2>
+        今日の1票で<br />
+        未来を変えよう🌱
+      </h2>
 
       <a class="vote-btn" href="#"> VOTE NOW </a>
     </section>

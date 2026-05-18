@@ -985,3 +985,12 @@ iframe {
     }
 
 }
+
+@media(max-width:768px) {
+
+    .hero-loop-logo {
+
+        display: none;
+    }
+
+}

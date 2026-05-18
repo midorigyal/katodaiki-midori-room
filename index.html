@@ -2,42 +2,63 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>KATO DAIKI MIDORI ROOM</title>
 
     <link rel="stylesheet" href="style.css" />
+
     <script src="script.js" defer></script>
   </head>
 
   <body>
+    <!-- LOADING -->
+
+    <div class="loader">
+      <div class="loader-logo">KD🌱</div>
+
+      <div class="loader-text">MIDORI ROOM</div>
+    </div>
+
     <!-- HEADER -->
 
     <header class="header">
       <div class="logo">KD🌱</div>
 
       <nav>
-        <a href="#profile">PROFILE</a>
-        <a href="#movie">MOVIE</a>
-        <a href="gallery.html">GALLERY</a>
-        <a href="vote.html">VOTE</a>
+        <a href="#profile"> PROFILE </a>
+
+        <a href="#movie"> MOVIE </a>
+
+        <a href="gallery.html"> GALLERY </a>
+
+        <a href="vote.html"> VOTE </a>
       </nav>
     </header>
 
     <!-- HERO -->
 
     <section class="hero">
-      <iframe
-        class="hero-video"
-        src="https://www.youtube.com/embed/Wr1T3XZaMus?autoplay=1&mute=1&controls=0&loop=1&playlist=Wr1T3XZaMus"
-        title="YouTube video player"
-        frameborder="0"
-        allow="autoplay"
-        allowfullscreen
-      >
-      </iframe>
+      <!-- VIDEO -->
+
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="videos/hero.mp4" type="video/mp4" />
+      </video>
+
+      <!-- STARS -->
+
+      <div class="stars"></div>
+
+      <!-- OVERLAY -->
 
       <div class="overlay"></div>
+
+      <!-- SOUND -->
+
+      <button class="sound-btn">🔇</button>
+
+      <!-- HERO CONTENT -->
 
       <div class="hero-content">
         <p class="mini">PRODUCE IDOL FAN SITE</p>
@@ -50,7 +71,10 @@
         <p class="hero-sub">MIDORI ROOM 🌱</p>
 
         <p class="hero-text">
-          日プのギャル、<br />
+          日プのギャル。<br />
+
+          上品さと中性的な魅力を持つ<br />
+
           加藤大樹を全力応援中💚
         </p>
 
@@ -72,8 +96,11 @@
           <h3>BASIC</h3>
 
           <p>生年月日：2004/10/08</p>
+
           <p>出身地：愛知県</p>
+
           <p>身長：178cm</p>
+
           <p>MBTI：ENTP</p>
         </div>
 
@@ -81,14 +108,19 @@
           <h3>FAVORITE</h3>
 
           <p>趣味：衣装作り、メイク、緑色集め</p>
+
           <p>特技：パフェ作り</p>
 
           <div class="floating-tags">
-            <span>#愛されギャル</span>
-            <span>#努力家</span>
-            <span>#表情管理</span>
-            <span>#中性的</span>
-            <span>#沼男子</span>
+            <span> #愛されギャル </span>
+
+            <span> #努力家 </span>
+
+            <span> #表情管理 </span>
+
+            <span> #中性的 </span>
+
+            <span> #沼男子 </span>
           </div>
         </div>
       </div>
@@ -100,6 +132,8 @@
       <h2>MOVIE 💚</h2>
 
       <div class="movie-grid">
+        <!-- MOVIE 1 -->
+
         <div class="movie-card fade-up">
           <iframe
             src="https://www.youtube.com/embed/Wr1T3XZaMus"
@@ -111,6 +145,8 @@
 
           <p>🎥 チッケム</p>
         </div>
+
+        <!-- MOVIE 2 -->
 
         <div class="movie-card fade-up">
           <iframe
@@ -124,6 +160,8 @@
           <p>💚 パフォーマンス動画</p>
         </div>
 
+        <!-- MOVIE 3 -->
+
         <div class="movie-card fade-up">
           <iframe
             src="https://www.youtube.com/embed/Z0PWG4F08JA"
@@ -135,6 +173,8 @@
 
           <p>✨ ステージ映像</p>
         </div>
+
+        <!-- MOVIE 4 -->
 
         <div class="movie-card fade-up">
           <iframe
@@ -170,7 +210,10 @@
       <div class="about-card fade-up">
         <p>
           PRODUCE 101 JAPANは、<br />
-          国民投票でデビューメンバーを決めるオーディション番組💚
+
+          国民投票でデビューメンバーを決める<br />
+
+          オーディション番組💚
         </p>
       </div>
     </section>
@@ -190,6 +233,7 @@
 
       <p class="vote-text">
         Web投票 + Lemino投票で<br />
+
         1日2票 応援できます💚
       </p>
 

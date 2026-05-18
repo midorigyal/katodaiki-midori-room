@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    background: #f5fff5;
+    font-family: sans-serif;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 56px;
+    color: #00c853;
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+a {
+    margin-top: 20px;
+    background: #7ed957;
+    padding: 15px 30px;
+    border-radius: 999px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}

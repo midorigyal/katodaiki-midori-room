@@ -53,75 +53,6 @@ window.addEventListener('load', () => {
 
 });
 
-/* STARS */
-
-const stars =
-document.querySelector('.stars');
-
-for(let i=0;i<80;i++){
-
-  const star =
-  document.createElement('div');
-
-  star.classList.add('star');
-
-  star.style.left =
-  Math.random() * 100 + '%';
-
-  star.style.top =
-  Math.random() * 100 + '%';
-
-  star.style.animationDuration =
-  2 + Math.random() * 4 + 's';
-
-  stars.appendChild(star);
-}
-
-/* SOUND BUTTON */
-
-const heroVideo =
-document.querySelector('.hero-video');
-
-const soundBtn =
-document.querySelector('.sound-btn');
-
-soundBtn.addEventListener('click',() => {
-
-  heroVideo.muted =
-  !heroVideo.muted;
-
-  if(heroVideo.muted){
-
-    soundBtn.innerHTML = "🔇";
-
-  }else{
-
-    soundBtn.innerHTML = "🔊";
-
-  }
-
-});
-
-/* PARALLAX */
-
-window.addEventListener('scroll', () => {
-
-  const scrollY =
-  window.scrollY;
-
-  heroVideo.style.transform =
-  `scale(1.05)
-   translateY(${scrollY * 0.08}px)`;
-
-});
-
-/* FORCE LOOP */
-
-heroVideo.addEventListener('ended', () => {
-
-  heroVideo.play();
-
-});
 /* TAP STAR EFFECT */
 
 document.addEventListener('touchstart', (e) => {
@@ -138,29 +69,5 @@ document.addEventListener('touchstart', (e) => {
   setTimeout(() => {
     star.remove();
   }, 600);
-
-});
-
-/* GALLERY MODAL */
-
-const items = document.querySelectorAll('.gallery-item');
-const modal = document.getElementById('modal');
-const modalImg = document.getElementById('modalImg');
-
-items.forEach(item => {
-
-  item.addEventListener('click', () => {
-
-    modal.classList.add('show');
-
-    modalImg.src = item.src;
-
-  });
-
-});
-
-modal.addEventListener('click', () => {
-
-  modal.classList.remove('show');
 
 });

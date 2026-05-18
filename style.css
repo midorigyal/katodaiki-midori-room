@@ -822,3 +822,57 @@ iframe {
     transform:
         translateY(0);
 }
+
+/* LOOP LOGO */
+
+.hero-loop-logo {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 42px;
+
+    letter-spacing: 8px;
+
+    font-weight: 800;
+
+    color: white;
+
+    opacity: 0;
+
+    z-index: 4;
+
+    pointer-events: none;
+
+    animation:
+        logoLoop 6s infinite;
+}
+
+@keyframes logoLoop {
+
+    0% {
+        opacity: 0;
+    }
+
+    70% {
+        opacity: 0;
+    }
+
+    82% {
+        opacity: 1;
+    }
+
+    92% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

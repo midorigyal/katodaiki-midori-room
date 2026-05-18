@@ -3,21 +3,145 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>KATO DAIKI MIDORI ROOM</title>
 
     <link rel="stylesheet" href="style.css" />
+
+    <script src="script.js" defer></script>
   </head>
 
   <body>
+    <header class="header">
+      <div class="logo">KD🌱</div>
+
+      <nav>
+        <a href="#profile">PROFILE</a>
+        <a href="#movie">MOVIE</a>
+        <a href="#vote">VOTE</a>
+        <a href="#about">ABOUT</a>
+      </nav>
+    </header>
+
     <section class="hero">
-      <h1>KATO DAIKI 🌱</h1>
+      <video autoplay muted loop playsinline>
+        <source src="https://youtu.be/Wr1T3XZaMus?si=dzPtc5w2Rpaz-yuo" />
+      </video>
 
-      <p>
-        日プのギャル、<br />
-        加藤大樹を応援中💚
-      </p>
+      <div class="overlay"></div>
 
-      <a href="#"> VOTE NOW </a>
+      <div class="hero-content">
+        <p class="mini">PRODUCE IDOL FAN SITE</p>
+
+        <h1>
+          KATO<br />
+          DAIKI
+        </h1>
+
+        <p class="hero-sub">MIDORI ROOM 🌱</p>
+
+        <p class="hero-text">日プのギャル、 加藤大樹を全力応援中💚</p>
+
+        <div class="hero-buttons">
+          <a class="main-btn" href="#vote">VOTE NOW</a>
+          <a class="sub-btn" href="#profile">PROFILE</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="profile" class="profile section">
+      <h2>PROFILE</h2>
+
+      <div class="profile-grid">
+        <div class="profile-card fade-up">
+          <h3>BASIC</h3>
+          <p>誕生日：○月○日</p>
+          <p>MBTI：XXXX</p>
+          <p>趣味：ダンス</p>
+        </div>
+
+        <div class="profile-card fade-up">
+          <h3>CHARM</h3>
+          <p>#愛されギャル</p>
+          <p>#努力家</p>
+          <p>#表情管理</p>
+        </div>
+      </div>
+
+      <div class="floating-tags">
+        <span>#ギャル</span>
+        <span>#努力家</span>
+        <span>#中毒性</span>
+        <span>#沼男子</span>
+      </div>
+    </section>
+
+    <section id="movie" class="movie section">
+      <h2>MOVIE 💚</h2>
+
+      <div class="movie-grid">
+        <div class="movie-card fade-up">
+          <iframe
+            src="https://youtu.be/Wr1T3XZaMus?si=dzPtc5w2Rpaz-yuo"
+            title="YouTube video player"
+            frameborder="0"
+            allowfullscreen
+          >
+          </iframe>
+
+          <p>加藤大樹 チッケム</p>
+        </div>
+
+        <div class="movie-card fade-up">
+          <iframe
+            src="https://youtu.be/646FH20pfDk?si=gLiMcypju6RU4Bd8"
+            title="YouTube video player"
+            frameborder="0"
+            allowfullscreen
+          >
+          </iframe>
+
+          <p>ステージ映像</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about section">
+      <h2>ABOUT 日プ</h2>
+
+      <div class="about-card fade-up">
+        <p>
+          PRODUCE 101 JAPANは 国民投票でデビューメンバーを決める
+          オーディション番組。
+        </p>
+      </div>
+    </section>
+
+    <section class="tremino section">
+      <h2>TREMINO HOW TO</h2>
+
+      <div class="step-grid">
+        <div class="step-card fade-up">
+          <h3>STEP 1</h3>
+          <p>アプリDL</p>
+        </div>
+
+        <div class="step-card fade-up">
+          <h3>STEP 2</h3>
+          <p>ログイン</p>
+        </div>
+
+        <div class="step-card fade-up">
+          <h3>STEP 3</h3>
+          <p>投票する</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="vote" class="vote">
+      <h2>今日の1票で 未来を変えよう🌱</h2>
+
+      <a class="vote-btn" href="#"> VOTE NOW </a>
     </section>
   </body>
 </html>

@@ -525,6 +525,46 @@ h1 {
     font-weight: bold;
 }
 
+/* PROFILE IMAGE LAYOUT */
+
+.profile-layout {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 26px;
+}
+
+.profile-image {
+
+    width: 100%;
+}
+
+.profile-image img {
+
+    width: 100%;
+
+    height: 540px;
+
+    object-fit: cover;
+
+    border-radius: 34px;
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, .45),
+        0 0 40px rgba(125, 255, 114, .12);
+}
+
+.profile-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 24px;
+}
+
 /* MOVIE */
 
 .movie-grid {

@@ -547,6 +547,8 @@ h1 {
 
     max-width: 260px;
 
+    max-height: 520px;
+
     height: auto;
 
     object-fit: contain;
@@ -575,26 +577,23 @@ h1 {
 
 }
 
-.profile-image::before {
+@media(min-width:900px) {
 
-    content: "";
+    .profile-layout {
 
-    position: absolute;
+        flex-direction: row;
 
-    width: 240px;
-    height: 240px;
+        align-items: center;
 
-    background: #7dff72;
+        gap: 60px;
+    }
 
-    border-radius: 50%;
+    .profile-image,
+    .profile-info {
 
-    filter: blur(100px);
+        flex: 1;
+    }
 
-    opacity: .15;
-
-    z-index: -1;
-
-    top: 60px;
 }
 
 .profile-info {

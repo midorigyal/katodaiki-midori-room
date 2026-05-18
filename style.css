@@ -114,17 +114,11 @@ body {
 
 .logo {
 
-    font-size: 28px;
+    font-size: 20px;
 
-    font-weight: 900;
+    letter-spacing: 4px;
 
-    color: #7dff72;
-
-    text-shadow:
-        0 0 12px #7dff72;
-
-    animation:
-        logoGlow 3s infinite alternate;
+    font-weight: 700;
 }
 
 @keyframes logoGlow {
@@ -538,22 +532,65 @@ h1 {
 
 .profile-image {
 
-    width: 100%;
+    display: flex;
+
+    justify-content: center;
+
+    position: relative;
 }
 
 .profile-image img {
 
-    width: 100%;
+    width: 78%;
 
-    height: 540px;
+    max-width: 320px;
+
+    aspect-ratio: 3/4;
 
     object-fit: cover;
 
-    border-radius: 34px;
+    border-radius: 28px;
+
+    transform:
+        rotate(-3deg);
+
+    border:
+        10px solid #f7f7f7;
 
     box-shadow:
-        0 10px 40px rgba(0, 0, 0, .45),
+        0 20px 50px rgba(0, 0, 0, .45),
         0 0 40px rgba(125, 255, 114, .12);
+
+    transition: .4s;
+}
+
+.profile-image img:hover {
+
+    transform:
+        rotate(0deg) scale(1.03);
+
+}
+
+.profile-image::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    background: #7dff72;
+
+    border-radius: 50%;
+
+    filter: blur(90px);
+
+    opacity: .18;
+
+    z-index: -1;
+
+    top: 40px;
 }
 
 .profile-info {

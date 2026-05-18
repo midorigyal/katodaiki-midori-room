@@ -1,14 +1,18 @@
-/* ALWAYS TOP */
+/* RESET SCROLL */
 
-window.onbeforeunload = function () {
+if ('scrollRestoration' in history) {
 
-  window.scrollTo(0, 0);
+  history.scrollRestoration = 'manual';
 
-};
+}
 
 window.addEventListener('load', () => {
 
-  window.scrollTo(0,0);
+  setTimeout(() => {
+
+    window.scrollTo(0,0);
+
+  },10);
 
 });
 
@@ -108,5 +112,13 @@ window.addEventListener('scroll', () => {
   heroVideo.style.transform =
   `scale(1.05)
    translateY(${scrollY * 0.08}px)`;
+
+});
+
+/* FORCE LOOP */
+
+heroVideo.addEventListener('ended', () => {
+
+  heroVideo.play();
 
 });

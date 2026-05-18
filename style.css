@@ -277,29 +277,65 @@ iframe {
 
 /* GALLERY */
 
-.gallery-grid {
-    display: grid;
+.gallery-slider {
+    overflow-x: auto;
 
-    grid-template-columns: 1fr 1fr;
+    scroll-snap-type: x mandatory;
 
-    gap: 14px;
+    padding-bottom: 10px;
+
+    -webkit-overflow-scrolling: touch;
 }
 
-.gallery-grid img {
-    width: 100%;
+.gallery-slider::-webkit-scrollbar {
+    display: none;
+}
 
-    aspect-ratio: 1/1;
+.gallery-track {
+    display: flex;
+
+    gap: 20px;
+
+    width: max-content;
+
+    padding: 10px 20px 10px 0;
+}
+
+.gallery-track img {
+
+    width: 220px;
+    height: 320px;
 
     object-fit: cover;
+    object-position: center;
 
-    border-radius: 22px;
+    border-radius: 28px;
 
-    transition: .3s;
+    flex-shrink: 0;
+
+    scroll-snap-align: center;
+
+    transition: .4s;
+
+    background: #222;
+
+    border: 2px solid rgba(125, 255, 114, .15);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, .4),
+        0 0 20px rgba(125, 255, 114, .12);
 }
 
-.gallery-grid img:hover {
-    transform: scale(1.03);
+.gallery-track img:hover {
+
+    transform:
+        translateY(-8px) rotate(-2deg) scale(1.03);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, .5),
+        0 0 35px rgba(125, 255, 114, .35);
 }
+
 
 /* ABOUT */
 

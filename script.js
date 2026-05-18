@@ -122,3 +122,45 @@ heroVideo.addEventListener('ended', () => {
   heroVideo.play();
 
 });
+/* TAP STAR EFFECT */
+
+document.addEventListener('touchstart', (e) => {
+
+  const star = document.createElement('div');
+
+  star.className = 'tap-star';
+
+  star.style.left = e.touches[0].clientX + 'px';
+  star.style.top = e.touches[0].clientY + 'px';
+
+  document.body.appendChild(star);
+
+  setTimeout(() => {
+    star.remove();
+  }, 600);
+
+});
+
+/* GALLERY MODAL */
+
+const items = document.querySelectorAll('.gallery-item');
+const modal = document.getElementById('modal');
+const modalImg = document.getElementById('modalImg');
+
+items.forEach(item => {
+
+  item.addEventListener('click', () => {
+
+    modal.classList.add('show');
+
+    modalImg.src = item.src;
+
+  });
+
+});
+
+modal.addEventListener('click', () => {
+
+  modal.classList.remove('show');
+
+});

@@ -973,23 +973,6 @@ iframe {
 
     .hero-loop-logo {
 
-        align-items: flex-start;
-
-        padding-top: 180px;
-
-        font-size: 28px;
-
-        letter-spacing: 5px;
-
-        opacity: .75;
-    }
-
-}
-
-@media(max-width:768px) {
-
-    .hero-loop-logo {
-
         display: none;
     }
 

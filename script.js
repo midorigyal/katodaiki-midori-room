@@ -53,21 +53,42 @@ window.addEventListener('load', () => {
 
 });
 
-/* TAP STAR EFFECT */
+/* 💗 TAP EFFECT */
 
 document.addEventListener('touchstart', (e) => {
 
+  const x = e.touches[0].clientX;
+  const y = e.touches[0].clientY;
+
+  // HEART
+  const heart = document.createElement('div');
+
+  heart.className = 'heart';
+
+  heart.innerHTML = '💗';
+
+  heart.style.left = x + 'px';
+  heart.style.top = y + 'px';
+
+  document.body.appendChild(heart);
+
+  // STAR
   const star = document.createElement('div');
 
-  star.className = 'tap-star';
+  star.className = 'tap-effect-star';
 
-  star.style.left = e.touches[0].clientX + 'px';
-  star.style.top = e.touches[0].clientY + 'px';
+  star.innerHTML = '✨';
+
+  star.style.left = (x + 12) + 'px';
+  star.style.top = (y - 12) + 'px';
 
   document.body.appendChild(star);
 
   setTimeout(() => {
+
+    heart.remove();
     star.remove();
-  }, 600);
+
+  },900);
 
 });

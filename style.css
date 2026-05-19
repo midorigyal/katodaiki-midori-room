@@ -1027,25 +1027,40 @@ iframe {
 
 /* TAP EFFECT */
 
-.tap-star {
-
+.tap-effect-star {
     position: fixed;
-
-    width: 8px;
-    height: 8px;
-
-    background: #7dff72;
-
-    border-radius: 50%;
-
+    font-size: 15px;
     pointer-events: none;
-
     z-index: 9999;
+    animation: sparkle 0.9s ease forwards;
+    filter: drop-shadow(0 0 10px #7dff72);
+}
 
-    box-shadow:
-        0 0 10px #7dff72;
+.heart {
+    position: fixed;
+    font-size: 22px;
+    pointer-events: none;
+    z-index: 9999;
+    animation: pop 0.8s ease forwards;
+    filter: drop-shadow(0 0 8px rgba(255, 77, 109, .7));
+}
 
-    animation: tapFade .6s ease forwards;
+@keyframes sparkle {
+
+    0% {
+        transform:
+            scale(.5) rotate(0deg);
+
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            scale(2) rotate(180deg) translateY(-20px);
+
+        opacity: 0;
+    }
+
 }
 
 @keyframes tapFade {

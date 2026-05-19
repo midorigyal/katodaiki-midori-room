@@ -1,4 +1,6 @@
-/* RESET SCROLL */
+/* =========================
+   RESET SCROLL
+========================= */
 
 if ('scrollRestoration' in history) {
 
@@ -16,7 +18,9 @@ window.addEventListener('load', () => {
 
 });
 
-/* FADE UP */
+/* =========================
+   FADE UP
+========================= */
 
 const fadeElements =
 document.querySelectorAll('.fade-up');
@@ -38,57 +42,212 @@ window.addEventListener('scroll', () => {
 
 });
 
-/* LOADING */
+/* =========================
+   LOADING
+========================= */
 
 window.addEventListener('load', () => {
 
   const loader =
   document.querySelector('.loader');
 
-  setTimeout(() => {
+  if(loader){
 
-    loader.classList.add('hide');
+    setTimeout(() => {
 
-  },1200);
+      loader.classList.add('hide');
+
+    },1200);
+
+  }
 
 });
 
-/* 💗 TAP EFFECT */
+/* =========================
+   STARS BG
+========================= */
+
+const stars =
+document.querySelector('.stars');
+
+if(stars){
+
+  for(let i=0;i<80;i++){
+
+    const star =
+    document.createElement('div');
+
+    star.classList.add('star');
+
+    star.style.left =
+    Math.random() * 100 + '%';
+
+    star.style.top =
+    Math.random() * 100 + '%';
+
+    star.style.animationDuration =
+    2 + Math.random() * 4 + 's';
+
+    stars.appendChild(star);
+
+  }
+
+}
+
+/* =========================
+   HERO VIDEO
+========================= */
+
+const heroVideo =
+document.querySelector('.hero-video');
+
+const soundBtn =
+document.querySelector('.sound-btn');
+
+/* SOUND BUTTON */
+
+if(heroVideo && soundBtn){
+
+  soundBtn.addEventListener('click',() => {
+
+    heroVideo.muted =
+    !heroVideo.muted;
+
+    if(heroVideo.muted){
+
+      soundBtn.innerHTML = "🔇";
+
+    }else{
+
+      soundBtn.innerHTML = "🔊";
+
+    }
+
+  });
+
+}
+
+/* PARALLAX */
+
+if(heroVideo){
+
+  window.addEventListener('scroll', () => {
+
+    const scrollY =
+    window.scrollY;
+
+    heroVideo.style.transform =
+    `scale(1.05)
+     translateY(${scrollY * 0.08}px)`;
+
+  });
+
+}
+
+/* FORCE LOOP */
+
+if(heroVideo){
+
+  heroVideo.addEventListener('ended', () => {
+
+    heroVideo.play();
+
+  });
+
+}
+
+/* =========================
+   TAP EFFECT
+========================= */
 
 document.addEventListener('touchstart', (e) => {
 
-  const x = e.touches[0].clientX;
-  const y = e.touches[0].clientY;
+  const x =
+  e.touches[0].clientX;
 
-  // HEART
-  const heart = document.createElement('div');
+  const y =
+  e.touches[0].clientY;
 
-  heart.className = 'heart';
+  /* HEART */
 
-  heart.innerHTML = '💗';
+  const heart =
+  document.createElement('div');
 
-  heart.style.left = x + 'px';
-  heart.style.top = y + 'px';
+  heart.className =
+  'heart';
+
+  heart.innerHTML =
+  '💗';
+
+  heart.style.left =
+  x + 'px';
+
+  heart.style.top =
+  y + 'px';
 
   document.body.appendChild(heart);
 
-  // STAR
-  const star = document.createElement('div');
+  /* STAR */
 
-  star.className = 'tap-effect-star';
+  const star =
+  document.createElement('div');
 
-  star.innerHTML = '✨';
+  star.className =
+  'tap-effect-star';
 
-  star.style.left = (x + 12) + 'px';
-  star.style.top = (y - 12) + 'px';
+  star.innerHTML =
+  '✨';
+
+  star.style.left =
+  (x + 12) + 'px';
+
+  star.style.top =
+  (y - 12) + 'px';
 
   document.body.appendChild(star);
 
   setTimeout(() => {
 
     heart.remove();
+
     star.remove();
 
   },900);
 
 });
+
+/* =========================
+   GALLERY MODAL
+========================= */
+
+const items =
+document.querySelectorAll('.gallery-item');
+
+const modal =
+document.getElementById('modal');
+
+const modalImg =
+document.getElementById('modalImg');
+
+if(items.length > 0 && modal && modalImg){
+
+  items.forEach(item => {
+
+    item.addEventListener('click', () => {
+
+      modal.classList.add('show');
+
+      modalImg.src =
+      item.src;
+
+    });
+
+  });
+
+  modal.addEventListener('click', () => {
+
+    modal.classList.remove('show');
+
+  });
+
+}

@@ -53,42 +53,56 @@ window.addEventListener('load', () => {
 
 });
 
-/* 💗 TAP EFFECT */
+/* CURSOR EFFECT */
 
-document.addEventListener('touchstart', (e) => {
+document.addEventListener('touchstart',(e)=>{
 
   const x = e.touches[0].clientX;
   const y = e.touches[0].clientY;
 
-  // HEART
-  const heart = document.createElement('div');
+  const spark =
+  document.createElement('div');
 
-  heart.className = 'heart';
+  spark.className =
+  'cursor-spark';
 
-  heart.innerHTML = '💗';
+  spark.style.left = x + 'px';
+  spark.style.top = y + 'px';
 
-  heart.style.left = x + 'px';
-  heart.style.top = y + 'px';
+  document.body.appendChild(spark);
 
-  document.body.appendChild(heart);
+  setTimeout(()=>{
 
-  // STAR
-  const star = document.createElement('div');
+    spark.remove();
 
-  star.className = 'tap-effect-star';
-
-  star.innerHTML = '✨';
-
-  star.style.left = (x + 12) + 'px';
-  star.style.top = (y - 12) + 'px';
-
-  document.body.appendChild(star);
-
-  setTimeout(() => {
-
-    heart.remove();
-    star.remove();
-
-  },900);
+  },800);
 
 });
+
+/* ✨ FLOATING STARS */
+
+const starsContainer =
+document.querySelector('.stars');
+
+for(let i = 0; i < 40; i++){
+
+  const star =
+  document.createElement('div');
+
+  star.classList.add('star');
+
+  star.style.top =
+  Math.random() * 100 + '%';
+
+  star.style.left =
+  Math.random() * 100 + '%';
+
+  star.style.animationDuration =
+  2 + Math.random() * 4 + 's';
+
+  star.style.animationDelay =
+  Math.random() * 5 + 's';
+
+  starsContainer.appendChild(star);
+
+}

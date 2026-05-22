@@ -103,7 +103,7 @@ if(starsContainer){
 
 const createGlitter = (x, y) => {
 
-  for(let i = 0; i < 6; i++){
+  for(let i = 0; i < 4; i++){
 
     const glitter =
     document.createElement('div');
@@ -112,10 +112,10 @@ const createGlitter = (x, y) => {
     'glitter';
 
     glitter.style.left =
-    x + (Math.random() * 30 - 15) + 'px';
+    x + (Math.random() * 26 - 13) + 'px';
 
     glitter.style.top =
-    y + (Math.random() * 30 - 15) + 'px';
+    y + (Math.random() * 26 - 13) + 'px';
 
     glitter.style.transform =
     `rotate(${Math.random() * 360}deg)`;
@@ -150,7 +150,7 @@ document.addEventListener('touchstart', (e) => {
 
 document.addEventListener('mousemove', (e) => {
 
-  if(Math.random() > 0.92){
+  if(Math.random() > 0.94){
 
     createGlitter(
       e.clientX,
@@ -209,75 +209,15 @@ window.addEventListener('scroll', () => {
 });
 
 /* =========================
-   RANDOM FLASH TEXT
+   RANDOM NOISE
 ========================= */
 
-const flashTexts = [
-
-  'green addict.',
-  'visual shock.',
-  'too handsome.',
-  'face card never declines.',
-  'debut him now.',
-  'visual overload.',
-  'MIDORI ROOM.',
-  '걍 잘생김.'
-
-];
-
-setInterval(() => {
-
-  const flash =
-  document.createElement('div');
-
-  flash.className =
-  'flash-text';
-
-  flash.innerText =
-
-  flashTexts[
-    Math.floor(
-      Math.random() *
-      flashTexts.length
-    )
-  ];
-
-  flash.style.top =
-  Math.random() * 80 + '%';
-
-  flash.style.left =
-  Math.random() * 80 + '%';
-
-  document.body.appendChild(flash);
-
-  setTimeout(() => {
-
-    flash.remove();
-
-  }, 5000);
-
-}, 4000);
-
-/* =========================
-   FLOATING NOISE
-========================= */
-
-for(let i = 0; i < 18; i++){
+for(let i = 0; i < 24; i++){
 
   const noise =
   document.createElement('div');
 
-  noise.style.position =
-  'fixed';
-
-  noise.style.width =
-  '1px';
-
-  noise.style.height =
-  '1px';
-
-  noise.style.background =
-  'rgba(255,255,255,.08)';
+  noise.classList.add('noise-dot');
 
   noise.style.left =
   Math.random() * 100 + 'vw';
@@ -285,17 +225,223 @@ for(let i = 0; i < 18; i++){
   noise.style.top =
   Math.random() * 100 + 'vh';
 
-  noise.style.pointerEvents =
-  'none';
-
-  noise.style.zIndex =
-  '1';
-
-  noise.style.animation =
-  `twinkle ${
-    2 + Math.random() * 4
-  }s infinite`;
+  noise.style.animationDuration =
+  2 + Math.random() * 4 + 's';
 
   document.body.appendChild(noise);
+
+}
+
+/* =========================
+   RANDOM GLITTER FLASH
+========================= */
+
+setInterval(() => {
+
+  const flash =
+  document.createElement('div');
+
+  flash.className =
+  'random-flash';
+
+  flash.style.left =
+  Math.random() * 100 + 'vw';
+
+  flash.style.top =
+  Math.random() * 100 + 'vh';
+
+  document.body.appendChild(flash);
+
+  setTimeout(() => {
+
+    flash.remove();
+
+  }, 1200);
+
+}, 1800);
+
+/* =========================
+   FLOATING MINI STICKER
+========================= */
+
+const stickers =
+
+document.querySelectorAll(
+  '.gallery-sticker, .gallery-heart'
+);
+
+stickers.forEach(sticker => {
+
+  let randomRotate =
+  Math.random() * 6 - 3;
+
+  sticker.animate(
+
+    [
+
+      {
+
+        transform:
+        `translateY(0px)
+        rotate(${randomRotate}deg)`
+
+      },
+
+      {
+
+        transform:
+        `translateY(-8px)
+        rotate(${randomRotate + 3}deg)`
+
+      }
+
+    ],
+
+    {
+
+      duration:
+      2500 + Math.random() * 1500,
+
+      iterations:Infinity,
+
+      direction:'alternate',
+
+      easing:'ease-in-out'
+
+    }
+
+  );
+
+});
+
+/* =========================
+   CARD HOVER
+========================= */
+
+const cards =
+document.querySelectorAll(
+
+  '.profile-card, .movie-card'
+
+);
+
+cards.forEach(card => {
+
+  card.addEventListener(
+
+    'mousemove',
+
+    (e) => {
+
+      const rect =
+      card.getBoundingClientRect();
+
+      const x =
+      e.clientX - rect.left;
+
+      const y =
+      e.clientY - rect.top;
+
+      const centerX =
+      rect.width / 2;
+
+      const centerY =
+      rect.height / 2;
+
+      const rotateY =
+      (x - centerX) / 22;
+
+      const rotateX =
+      -(y - centerY) / 22;
+
+      card.style.transform =
+
+      `perspective(800px)
+      rotateX(${rotateX}deg)
+      rotateY(${rotateY}deg)
+      translateY(-6px)`;
+
+    }
+
+  );
+
+  card.addEventListener(
+
+    'mouseleave',
+
+    () => {
+
+      card.style.transform =
+
+      'perspective(800px) rotateX(0) rotateY(0)';
+
+    }
+
+  );
+
+});
+
+/* =========================
+   MINI PHOTO RANDOM
+========================= */
+
+const miniPhotos =
+document.querySelectorAll('.mini-photo');
+
+miniPhotos.forEach(photo => {
+
+  photo.addEventListener(
+
+    'mouseenter',
+
+    () => {
+
+      const random =
+      Math.random() * 8 - 4;
+
+      photo.style.transform =
+
+      `rotate(${random}deg)
+      scale(1.08)`;
+
+    }
+
+  );
+
+});
+
+/* =========================
+   HERO LIGHT
+========================= */
+
+const hero =
+document.querySelector('.hero');
+
+if(hero){
+
+  hero.addEventListener(
+
+    'mousemove',
+
+    (e) => {
+
+      const x =
+      e.clientX / window.innerWidth;
+
+      const y =
+      e.clientY / window.innerHeight;
+
+      hero.style.background =
+
+      `radial-gradient(
+        circle at
+        ${x * 100}% ${y * 100}%,
+        rgba(255,107,203,.08),
+        transparent 40%
+      )`;
+
+    }
+
+  );
 
 }

@@ -7,245 +7,25 @@
 
     <title>MIDORI GALLERY</title>
 
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+    <!-- FONT -->
 
-      html {
-        scroll-behavior: smooth;
-      }
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
 
-      body {
-        background: linear-gradient(180deg, #0d0d0d, #111, #161616);
+    <!-- CSS -->
 
-        color: white;
+    <link rel="stylesheet" href="style.css" />
 
-        font-family: sans-serif;
+    <!-- JS -->
 
-        overflow-x: hidden;
-      }
-
-      /* BACKGROUND */
-
-      .bg-light {
-        position: fixed;
-
-        width: 300px;
-        height: 300px;
-
-        border-radius: 50%;
-
-        background: #7dff72;
-
-        filter: blur(140px);
-
-        opacity: 0.08;
-
-        z-index: -1;
-      }
-
-      .bg1 {
-        top: -100px;
-        left: -120px;
-      }
-
-      .bg2 {
-        bottom: -100px;
-        right: -120px;
-      }
-
-      /* HEADER */
-
-      .header {
-        position: fixed;
-
-        top: 0;
-
-        width: 100%;
-
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        padding: 18px 20px;
-
-        background: rgba(0, 0, 0, 0.45);
-
-        backdrop-filter: blur(14px);
-
-        z-index: 100;
-      }
-
-      .logo {
-        font-size: 24px;
-        font-weight: 900;
-
-        color: #7dff72;
-
-        letter-spacing: 2px;
-
-        text-shadow: 0 0 12px #7dff72;
-      }
-
-      .back-btn {
-        color: white;
-
-        text-decoration: none;
-
-        font-size: 13px;
-
-        opacity: 0.8;
-      }
-
-      /* HERO */
-
-      .hero {
-        padding: 130px 24px 70px;
-
-        text-align: center;
-      }
-
-      .mini {
-        color: #7dff72;
-
-        letter-spacing: 4px;
-
-        font-size: 11px;
-
-        margin-bottom: 18px;
-      }
-
-      h1 {
-        font-size: 52px;
-
-        line-height: 1;
-
-        margin-bottom: 20px;
-
-        font-weight: 900;
-      }
-
-      .hero-text {
-        color: #d8d8d8;
-
-        line-height: 1.9;
-
-        font-size: 14px;
-
-        max-width: 320px;
-
-        margin: auto;
-      }
-
-      /* GALLERY */
-
-      .gallery {
-        column-count: 2;
-
-        column-gap: 16px;
-
-        padding: 0 16px 120px;
-      }
-
-      .photo {
-        position: relative;
-
-        margin-bottom: 16px;
-
-        break-inside: avoid;
-
-        border-radius: 28px;
-
-        overflow: hidden;
-
-        background: #1a1a1a;
-
-        border: 1px solid rgba(255, 255, 255, 0.05);
-
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
-
-        transition: 0.5s;
-      }
-
-      .photo:hover {
-        transform: translateY(-6px);
-
-        box-shadow:
-          0 15px 40px rgba(0, 0, 0, 0.55),
-          0 0 30px rgba(125, 255, 114, 0.12);
-      }
-
-      .photo img {
-        width: 100%;
-
-        display: block;
-      }
-
-      /* OVERLAY */
-
-      .photo::after {
-        content: "MIDORI ROOM";
-
-        position: absolute;
-
-        bottom: 14px;
-        left: 14px;
-
-        font-size: 11px;
-
-        letter-spacing: 2px;
-
-        color: white;
-
-        background: rgba(0, 0, 0, 0.35);
-
-        padding: 8px 12px;
-
-        border-radius: 999px;
-
-        backdrop-filter: blur(10px);
-      }
-
-      /* QUOTE */
-
-      .quote {
-        padding: 0 30px 100px;
-
-        text-align: center;
-      }
-
-      .quote p {
-        font-size: 18px;
-
-        line-height: 2;
-
-        color: #f3f3f3;
-
-        font-weight: 300;
-      }
-
-      .quote span {
-        color: #7dff72;
-      }
-
-      /* FOOTER */
-
-      footer {
-        padding: 40px 20px;
-
-        text-align: center;
-
-        color: #888;
-
-        font-size: 12px;
-      }
-    </style>
+    <script src="script.js" defer></script>
   </head>
 
-  <body>
+  <body class="gallery-page">
+    <!-- BG LIGHT -->
+
     <div class="bg-light bg1"></div>
     <div class="bg-light bg2"></div>
 
@@ -259,44 +39,90 @@
 
     <!-- HERO -->
 
-    <section class="hero">
-      <p class="mini">MIDORI GALLERY</p>
+    <section class="hero gallery-hero">
+      <!-- FLOAT -->
 
-      <h1>
-        BEAUTY<br />
-        IN GREEN
-      </h1>
+      <div class="float-glitter" style="left: 8%; top: 60%"></div>
 
-      <p class="hero-text">
-        ギャルっぽさの中にある、 上品さと透明感。 加藤大樹の持つ
-        “今っぽい中性的な魅力” を切り取ったギャラリー💚
-      </p>
+      <div
+        class="float-glitter"
+        style="right: 12%; top: 20%; animation-delay: 2s"
+      ></div>
+
+      <div
+        class="float-glitter"
+        style="left: 42%; top: 16%; animation-delay: 4s"
+      ></div>
+
+      <div class="gallery-hero-text">
+        <p class="mini">MIDORI GALLERY</p>
+
+        <h1>
+          BEAUTY<br />
+          IN GREEN
+        </h1>
+
+        <p class="hero-text">
+          ギャルっぽさの中にある、<br />
+
+          上品さと透明感。<br /><br />
+
+          加藤大樹の持つ<br />
+
+          “今っぽい中性的な魅力” を<br />
+
+          切り取ったギャラリー💚
+        </p>
+      </div>
     </section>
 
     <!-- GALLERY -->
-    <section class="gallery">
-      <div class="photo">
-        <img src="images/2.JPG" />
-      </div>
 
-      <div class="photo">
-        <img src="images/3.JPG" />
-      </div>
+    <section class="gallery-section">
+      <div class="gallery-grid">
+        <!-- PHOTO -->
 
-      <div class="photo">
-        <img src="images/8.JPG" />
-      </div>
+        <div class="photo rotate-left fade-up">
+          <img src="images/2.JPG" />
 
-      <div class="photo">
-        <img src="images/9.JPG" />
-      </div>
+          <div class="photo-sticker">★</div>
+        </div>
 
-      <div class="photo">
-        <img src="images/10.JPG" />
-      </div>
+        <!-- PHOTO -->
 
-      <div class="photo">
-        <img src="images/11.JPG" />
+        <div class="photo rotate-right fade-up">
+          <img src="images/3.JPG" />
+
+          <div class="mini-tag">green boy</div>
+        </div>
+
+        <!-- PHOTO -->
+
+        <div class="photo fade-up">
+          <img src="images/8.JPG" />
+
+          <div class="photo-heart">♡</div>
+        </div>
+
+        <!-- PHOTO -->
+
+        <div class="photo rotate-left fade-up">
+          <img src="images/9.JPG" />
+        </div>
+
+        <!-- PHOTO -->
+
+        <div class="photo rotate-right fade-up">
+          <img src="images/10.JPG" />
+
+          <div class="mini-star">★</div>
+        </div>
+
+        <!-- PHOTO -->
+
+        <div class="photo fade-up">
+          <img src="images/11.JPG" />
+        </div>
       </div>
     </section>
 
@@ -312,8 +138,20 @@
       </p>
     </section>
 
+    <!-- FINAL -->
+
+    <section class="gallery-final">
+      <p class="gallery-final-mini">MIDORI ROOM</p>
+
+      <h2>still my favorite 🌱</h2>
+
+      <a href="index.html" class="gallery-btn"> BACK HOME </a>
+    </section>
+
     <!-- FOOTER -->
 
-    <footer>KATO DAIKI MIDORI ROOM 🌱</footer>
+    <footer class="footer">
+      <p>KATO DAIKI MIDORI ROOM 🌱</p>
+    </footer>
   </body>
 </html>

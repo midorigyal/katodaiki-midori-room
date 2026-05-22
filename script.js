@@ -97,31 +97,39 @@ if(starsContainer){
    SPARK EFFECT
 ========================= */
 
+/* =========================
+   GLITTER EFFECT
+========================= */
+
 document.addEventListener('touchstart', (e) => {
 
   const x = e.touches[0].clientX;
   const y = e.touches[0].clientY;
 
-  for(let i = 0; i < 8; i++){
+  for(let i = 0; i < 6; i++){
 
-    const sparkle =
+    const glitter =
     document.createElement('div');
 
-    sparkle.className = 'sparkle';
+    glitter.className =
+    'glitter';
 
-    sparkle.style.left =
-    x + (Math.random() * 40 - 20) + 'px';
+    glitter.style.left =
+    x + (Math.random() * 30 - 15) + 'px';
 
-    sparkle.style.top =
-    y + (Math.random() * 40 - 20) + 'px';
+    glitter.style.top =
+    y + (Math.random() * 30 - 15) + 'px';
 
-    document.body.appendChild(sparkle);
+    glitter.style.transform =
+    `rotate(${Math.random() * 360}deg)`;
+
+    document.body.appendChild(glitter);
 
     setTimeout(() => {
 
-      sparkle.remove();
+      glitter.remove();
 
-    }, 900);
+    }, 800);
 
   }
 

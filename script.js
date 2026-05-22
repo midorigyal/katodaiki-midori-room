@@ -25,7 +25,7 @@ window.addEventListener('load', () => {
 const fadeElements =
 document.querySelectorAll('.fade-up');
 
-window.addEventListener('scroll', () => {
+const fadeIn = () => {
 
   fadeElements.forEach(el => {
 
@@ -40,7 +40,11 @@ window.addEventListener('scroll', () => {
 
   });
 
-});
+};
+
+window.addEventListener('scroll', fadeIn);
+
+window.addEventListener('load', fadeIn);
 
 /* =========================
    LOADING
@@ -68,7 +72,7 @@ document.querySelector('.stars');
 
 if(starsContainer){
 
-  for(let i = 0; i < 40; i++){
+  for(let i = 0; i < 45; i++){
 
     const star =
     document.createElement('div');
@@ -82,7 +86,7 @@ if(starsContainer){
     Math.random() * 100 + '%';
 
     star.style.animationDuration =
-    2 + Math.random() * 4 + 's';
+    2 + Math.random() * 5 + 's';
 
     star.style.animationDelay =
     Math.random() * 5 + 's';
@@ -94,17 +98,10 @@ if(starsContainer){
 }
 
 /* =========================
-   SPARK EFFECT
-========================= */
-
-/* =========================
    GLITTER EFFECT
 ========================= */
 
-document.addEventListener('touchstart', (e) => {
-
-  const x = e.touches[0].clientX;
-  const y = e.touches[0].clientY;
+const createGlitter = (x, y) => {
 
   for(let i = 0; i < 6; i++){
 
@@ -133,6 +130,35 @@ document.addEventListener('touchstart', (e) => {
 
   }
 
+};
+
+/* MOBILE */
+
+document.addEventListener('touchstart', (e) => {
+
+  const x =
+  e.touches[0].clientX;
+
+  const y =
+  e.touches[0].clientY;
+
+  createGlitter(x, y);
+
+});
+
+/* PC */
+
+document.addEventListener('mousemove', (e) => {
+
+  if(Math.random() > 0.92){
+
+    createGlitter(
+      e.clientX,
+      e.clientY
+    );
+
+  }
+
 });
 
 /* =========================
@@ -151,7 +177,8 @@ if(video && soundBtn){
 
   soundBtn.addEventListener('click', () => {
 
-    video.muted = !video.muted;
+    video.muted =
+    !video.muted;
 
     soundBtn.textContent =
     video.muted ? '🔇' : '🔊';
@@ -180,3 +207,95 @@ window.addEventListener('scroll', () => {
   }
 
 });
+
+/* =========================
+   RANDOM FLASH TEXT
+========================= */
+
+const flashTexts = [
+
+  'green addict.',
+  'visual shock.',
+  'too handsome.',
+  'face card never declines.',
+  'debut him now.',
+  'visual overload.',
+  'MIDORI ROOM.',
+  '걍 잘생김.'
+
+];
+
+setInterval(() => {
+
+  const flash =
+  document.createElement('div');
+
+  flash.className =
+  'flash-text';
+
+  flash.innerText =
+
+  flashTexts[
+    Math.floor(
+      Math.random() *
+      flashTexts.length
+    )
+  ];
+
+  flash.style.top =
+  Math.random() * 80 + '%';
+
+  flash.style.left =
+  Math.random() * 80 + '%';
+
+  document.body.appendChild(flash);
+
+  setTimeout(() => {
+
+    flash.remove();
+
+  }, 5000);
+
+}, 4000);
+
+/* =========================
+   FLOATING NOISE
+========================= */
+
+for(let i = 0; i < 18; i++){
+
+  const noise =
+  document.createElement('div');
+
+  noise.style.position =
+  'fixed';
+
+  noise.style.width =
+  '1px';
+
+  noise.style.height =
+  '1px';
+
+  noise.style.background =
+  'rgba(255,255,255,.08)';
+
+  noise.style.left =
+  Math.random() * 100 + 'vw';
+
+  noise.style.top =
+  Math.random() * 100 + 'vh';
+
+  noise.style.pointerEvents =
+  'none';
+
+  noise.style.zIndex =
+  '1';
+
+  noise.style.animation =
+  `twinkle ${
+    2 + Math.random() * 4
+  }s infinite`;
+
+  document.body.appendChild(noise);
+
+}

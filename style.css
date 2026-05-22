@@ -81,7 +81,7 @@ body {
 
     display: flex;
 
-    justify-content: flex-end;
+    justify-content: flex-start;
 
     align-items: center;
 
@@ -96,38 +96,43 @@ body {
 }
 
 /* =========================
-   BACK BTN
+   LOGO
 ========================= */
 
-.back-btn {
+.logo {
+
+    font-size: 20px;
+
+    font-weight: 900;
+
+    letter-spacing: 5px;
 
     color: #7dff72;
 
-    text-decoration: none;
-
-    font-size: 14px;
-
-    letter-spacing: 4px;
-
-    font-weight: 800;
-
-    opacity: .9;
-
-    transition: .35s;
-
     text-shadow:
-        0 0 12px rgba(125, 255, 114, .25);
+        0 0 10px rgba(125, 255, 114, .7),
+        0 0 20px rgba(125, 255, 114, .2);
 
+    animation:
+        logoGlow 3s infinite alternate;
 }
 
-.back-btn:hover {
+@keyframes logoGlow {
 
-    opacity: 1;
+    from {
 
-    color: #ff6bcb;
+        text-shadow:
+            0 0 10px rgba(125, 255, 114, .5);
 
-    text-shadow:
-        0 0 16px rgba(255, 107, 203, .35);
+    }
+
+    to {
+
+        text-shadow:
+            0 0 18px rgba(125, 255, 114, .9),
+            0 0 28px rgba(125, 255, 114, .3);
+
+    }
 
 }
 

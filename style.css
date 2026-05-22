@@ -753,6 +753,41 @@ h1 {
         0 0 12px rgba(125, 255, 114, .18);
 }
 
+.profile-card:hover {
+
+    border:
+        1px solid rgba(255, 107, 203, .28);
+
+    box-shadow:
+        0 0 30px rgba(255, 107, 203, .12);
+}
+
+.profile-card:hover h3 {
+
+    color: #ff6bcb;
+
+    text-shadow:
+        0 0 12px rgba(255, 107, 203, .35);
+}
+
+.profile-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: -12px;
+
+    border:
+        1px solid rgba(255, 255, 255, .08);
+
+    border-radius: 40px;
+
+    transform:
+        rotate(2deg);
+
+}
+
 /* =========================
    MOVIE
 ========================= */
@@ -1139,6 +1174,148 @@ iframe {
     .hero-loop-logo {
 
         display: none;
+    }
+
+}
+
+/* =========================
+   BLINK DOT
+========================= */
+
+.blink-dot {
+
+    position: absolute;
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #7dff72;
+
+    box-shadow:
+        0 0 12px rgba(125, 255, 114, .8);
+
+    animation:
+        blinkDot 2s infinite;
+}
+
+@keyframes blinkDot {
+
+    0%, 100% {
+
+        opacity: .2;
+
+        transform:
+            scale(.7);
+
+    }
+
+    50% {
+
+        opacity: 1;
+
+        transform:
+            scale(1.4);
+
+    }
+
+}
+
+/* =========================
+   FLOAT GLITTER
+========================= */
+
+.float-glitter {
+
+    position: absolute;
+
+    width: 2px;
+    height: 40px;
+
+    background:
+        linear-gradient(transparent,
+            rgba(255, 255, 255, .8),
+            transparent);
+
+    opacity: .18;
+
+    filter: blur(.5px);
+
+    animation:
+        floatLine 7s infinite ease-in-out;
+}
+
+@keyframes floatLine {
+
+    0% {
+
+        transform:
+            translateY(0px) rotate(12deg);
+
+        opacity: 0;
+
+    }
+
+    30% {
+
+        opacity: .2;
+    }
+
+    70% {
+
+        opacity: .35;
+    }
+
+    100% {
+
+        transform:
+            translateY(-80px) rotate(12deg);
+
+        opacity: 0;
+    }
+
+}
+
+/* =========================
+   FLASH TEXT
+========================= */
+
+.flash-text {
+
+    position: absolute;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    color:
+        rgba(255, 255, 255, .18);
+
+    animation:
+        flashText 5s infinite;
+}
+
+@keyframes flashText {
+
+    0%, 80%, 100% {
+
+        opacity: 0;
+    }
+
+    84% {
+
+        opacity: .35;
+    }
+
+    88% {
+
+        opacity: 0;
+    }
+
+    92% {
+
+        opacity: .25;
     }
 
 }

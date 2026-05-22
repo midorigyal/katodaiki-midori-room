@@ -1332,3 +1332,212 @@ iframe {
     }
 
 }
+
+/* =========================
+   GALLERY PAGE
+========================= */
+
+.gallery-hero {
+
+    padding:
+        140px 24px 80px;
+
+    text-align: center;
+}
+
+.gallery {
+
+    column-count: 2;
+
+    column-gap: 18px;
+
+    padding:
+        0 18px 120px;
+}
+
+.photo {
+
+    position: relative;
+
+    margin-bottom: 18px;
+
+    break-inside: avoid;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    background: #1a1a1a;
+
+    border:
+        1px solid rgba(255, 255, 255, .05);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, .45);
+
+    transition: .45s;
+}
+
+.photo:hover {
+
+    transform:
+        translateY(-6px) scale(1.02);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, .55),
+        0 0 24px rgba(125, 255, 114, .12);
+}
+
+.photo img {
+
+    width: 100%;
+
+    display: block;
+}
+
+.photo::after {
+
+    content: "MIDORI ROOM";
+
+    position: absolute;
+
+    bottom: 14px;
+    left: 14px;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: white;
+
+    background:
+        rgba(0, 0, 0, .35);
+
+    padding:
+        8px 12px;
+
+    border-radius: 999px;
+
+    backdrop-filter: blur(10px);
+}
+
+/* ROTATE */
+
+.rotate-left {
+
+    transform:
+        rotate(-2deg);
+}
+
+.rotate-right {
+
+    transform:
+        rotate(2deg);
+}
+
+/* STICKER */
+
+.photo-sticker {
+
+    position: absolute;
+
+    top: 10px;
+    right: 12px;
+
+    font-size: 28px;
+
+    color: #ff6bcb;
+
+    text-shadow:
+        0 0 14px rgba(255, 107, 203, .45);
+
+    transform:
+        rotate(12deg);
+}
+
+.photo-heart {
+
+    position: absolute;
+
+    bottom: 40px;
+    right: 14px;
+
+    font-size: 26px;
+
+    color: #7dff72;
+
+    transform:
+        rotate(-10deg);
+}
+
+.mini-star {
+
+    position: absolute;
+
+    top: 14px;
+    left: 14px;
+
+    font-size: 24px;
+
+    color: #7dff72;
+}
+
+.mini-tag {
+
+    position: absolute;
+
+    top: 14px;
+    left: 14px;
+
+    background: #ff6bcb;
+
+    color: white;
+
+    padding:
+        8px 12px;
+
+    border-radius: 999px;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    transform:
+        rotate(-8deg);
+}
+
+/* QUOTE */
+
+.quote {
+
+    padding:
+        0 30px 120px;
+
+    text-align: center;
+}
+
+.quote p {
+
+    font-size: 20px;
+
+    line-height: 2.2;
+
+    color: #f3f3f3;
+
+    font-weight: 300;
+}
+
+.quote span {
+
+    color: #7dff72;
+}
+
+/* FINAL */
+
+.gallery-final {
+
+    padding:
+        120px 24px;
+
+    text-align: center;
+}

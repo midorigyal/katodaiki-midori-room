@@ -28,6 +28,8 @@ body {
         sans-serif;
 
     overflow-x: hidden;
+
+    position: relative;
 }
 
 /* =========================
@@ -120,25 +122,29 @@ body {
     padding: 18px 20px;
 
     background:
-        rgba(0, 0, 0, .45);
+        rgba(0, 0, 0, .38);
 
-    backdrop-filter: blur(14px);
+    backdrop-filter: blur(16px);
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, .05);
 
     z-index: 100;
 }
 
 .logo {
 
-    font-size: 18px;
+    font-size: 20px;
 
-    font-weight: 700;
+    font-weight: 900;
 
-    letter-spacing: 4px;
+    letter-spacing: 5px;
 
     color: #7dff72;
 
     text-shadow:
-        0 0 12px #7dff72;
+        0 0 10px rgba(125, 255, 114, .7),
+        0 0 20px rgba(125, 255, 114, .35);
 
     animation:
         logoGlow 3s infinite alternate;
@@ -230,90 +236,10 @@ nav a:hover {
 
     background:
         linear-gradient(to top,
-            rgba(0, 0, 0, .88),
-            rgba(0, 0, 0, .25));
+            rgba(0, 0, 0, .82),
+            rgba(0, 0, 0, .10));
 
     z-index: 1;
-}
-
-.sticker {
-
-    position: absolute;
-
-    padding: 10px 18px;
-
-    background: #ff4db8;
-
-    color: white;
-
-    font-size: 12px;
-
-    font-weight: 900;
-
-    letter-spacing: 2px;
-
-    border-radius: 999px;
-
-    box-shadow:
-        0 0 20px rgba(255, 77, 184, .5);
-
-    z-index: 6;
-
-    transform: rotate(-8deg);
-
-}
-
-.sticker1 {
-
-    top: 120px;
-    right: 20px;
-
-}
-
-.sticker2 {
-
-    bottom: 180px;
-    left: 20px;
-
-    background: #7dff72;
-    color: #111;
-
-}
-
-h1 {
-
-    font-family: 'Anton', sans-serif;
-
-    -webkit-text-stroke: 2px white;
-
-    color: transparent;
-
-    text-shadow:
-        0 0 30px rgba(125, 255, 114, .35);
-
-}
-
-.hero::after {
-
-    content: "MIDORI";
-
-    position: absolute;
-
-    right: -80px;
-    top: 120px;
-
-    font-size: 170px;
-
-    font-weight: 900;
-
-    color: rgba(255, 255, 255, .04);
-
-    transform: rotate(-90deg);
-
-    z-index: 2;
-
-    letter-spacing: 8px;
-
 }
 
 /* =========================
@@ -346,6 +272,10 @@ h1 {
 
     opacity: .7;
 
+    box-shadow:
+        0 0 10px white,
+        0 0 20px rgba(255, 255, 255, .5);
+
     animation:
         twinkle linear infinite;
 }
@@ -366,7 +296,7 @@ h1 {
         opacity: 1;
 
         transform:
-            scale(1.4);
+            scale(1.6);
 
     }
 
@@ -460,9 +390,9 @@ h1 {
     border-radius: 50%;
 
     background:
-        rgba(255, 255, 255, .12);
+        rgba(255, 255, 255, .08);
 
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
 
     color: white;
 
@@ -473,6 +403,9 @@ h1 {
     z-index: 5;
 
     transition: .3s;
+
+    border:
+        1px solid rgba(255, 255, 255, .08);
 }
 
 .sound-btn:hover {
@@ -481,7 +414,7 @@ h1 {
         scale(1.08);
 
     background:
-        rgba(125, 255, 114, .25);
+        rgba(125, 255, 114, .18);
 }
 
 /* =========================
@@ -536,11 +469,18 @@ h1 {
 
 h1 {
 
+    font-family: 'Anton', sans-serif;
+
     font-size: 74px;
 
     line-height: .9;
 
     font-weight: 900;
+
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 0 30px rgba(125, 255, 114, .18);
 }
 
 .hero-sub {
@@ -606,15 +546,20 @@ h1 {
     color: #111;
 
     box-shadow:
-        0 0 20px #7dff72;
+        0 0 20px rgba(125, 255, 114, .35);
 }
 
 .sub-btn {
 
     border:
-        2px solid white;
+        1px solid rgba(255, 255, 255, .2);
 
     color: white;
+
+    backdrop-filter: blur(10px);
+
+    background:
+        rgba(255, 255, 255, .04);
 }
 
 .main-btn:hover,
@@ -624,6 +569,9 @@ h1 {
 
     transform:
         translateY(-6px);
+
+    box-shadow:
+        0 0 24px rgba(125, 255, 114, .35);
 }
 
 /* =========================
@@ -682,7 +630,7 @@ h1 {
 
     filter: blur(100px);
 
-    opacity: .15;
+    opacity: .12;
 
     z-index: -1;
 
@@ -735,7 +683,11 @@ h1 {
 
 .profile-card {
 
-    background: #1b1b1b;
+    background:
+        rgba(20, 20, 20, .72);
+
+    backdrop-filter:
+        blur(16px);
 
     padding: 28px;
 
@@ -756,7 +708,7 @@ h1 {
         translateY(-6px);
 
     box-shadow:
-        0 0 30px rgba(125, 255, 114, .15);
+        0 0 30px rgba(125, 255, 114, .12);
 }
 
 .profile-card h3 {
@@ -796,36 +748,9 @@ h1 {
     font-size: 13px;
 
     font-weight: bold;
-}
 
-.profile-card:nth-child(1) {
-
-    transform: rotate(-2deg);
-
-}
-
-.profile-card:nth-child(2) {
-
-    transform: rotate(2deg);
-
-}
-
-body::before {
-
-    content: "";
-
-    position: fixed;
-
-    inset: 0;
-
-    background-image: url("ラメ画像");
-
-    opacity: .05;
-
-    pointer-events: none;
-
-    z-index: 999;
-
+    box-shadow:
+        0 0 12px rgba(125, 255, 114, .18);
 }
 
 /* =========================
@@ -843,7 +768,11 @@ body::before {
 
 .movie-card {
 
-    background: #1b1b1b;
+    background:
+        rgba(20, 20, 20, .72);
+
+    backdrop-filter:
+        blur(16px);
 
     border-radius: 30px;
 
@@ -864,7 +793,7 @@ body::before {
         translateY(-6px);
 
     box-shadow:
-        0 0 30px rgba(125, 255, 114, .15);
+        0 0 30px rgba(125, 255, 114, .12);
 }
 
 iframe {
@@ -909,6 +838,14 @@ iframe {
     box-shadow:
         0 10px 30px rgba(0, 0, 0, .5),
         0 0 30px rgba(125, 255, 114, .12);
+
+    transition: .4s;
+}
+
+.gallery-preview img:hover {
+
+    transform:
+        scale(1.02);
 }
 
 /* =========================
@@ -917,7 +854,11 @@ iframe {
 
 .about-card {
 
-    background: #1b1b1b;
+    background:
+        rgba(20, 20, 20, .72);
+
+    backdrop-filter:
+        blur(16px);
 
     padding: 30px;
 
@@ -1030,8 +971,7 @@ iframe {
     z-index: 2;
 
     box-shadow:
-        0 0 25px #7dff72,
-        0 0 60px rgba(125, 255, 114, .45);
+        0 0 25px rgba(125, 255, 114, .35);
 }
 
 /* =========================
@@ -1057,28 +997,83 @@ iframe {
 }
 
 /* =========================
-   PC LAYOUT
+   FOOTER
 ========================= */
 
-@media(min-width:900px) {
+.footer {
 
-    .profile-layout {
+    padding: 40px 20px;
 
-        flex-direction: row;
+    text-align: center;
 
-        align-items: center;
+    font-size: 12px;
 
-        gap: 60px;
+    color: #aaa;
+
+    border-top:
+        1px solid rgba(255, 255, 255, .08);
+
+    background:
+        rgba(0, 0, 0, .3);
+
+    backdrop-filter: blur(10px);
+}
+
+.footer p {
+
+    margin: 6px 0;
+}
+
+/* =========================
+   SPARK EFFECT
+========================= */
+
+.sparkle {
+
+    position: fixed;
+
+    width: 14px;
+    height: 14px;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: 9999;
+
+    background:
+        radial-gradient(circle,
+            rgba(255, 255, 255, 1) 0%,
+            rgba(255, 105, 180, .9) 25%,
+            rgba(125, 255, 114, .6) 60%,
+            transparent 100%);
+
+    mix-blend-mode: screen;
+
+    animation:
+        sparkleAnim .9s forwards;
+}
+
+@keyframes sparkleAnim {
+
+    0% {
+
+        transform:
+            scale(.3);
+
+        opacity: 1;
+
     }
 
-    .profile-image,
-    .profile-info {
+    100% {
 
-        flex: 1;
+        transform:
+            scale(2.8) translateY(-24px);
+
+        opacity: 0;
     }
 
 }
-
 
 /* =========================
    PC LAYOUT
@@ -1108,115 +1103,6 @@ iframe {
     .hero-loop-logo {
 
         display: none;
-    }
-
-}
-
-.footer {
-
-    padding: 40px 20px;
-
-    text-align: center;
-
-    font-size: 12px;
-
-    color: #aaa;
-
-    border-top: 1px solid rgba(255, 255, 255, .08);
-
-    background: rgba(0, 0, 0, .3);
-
-    backdrop-filter: blur(10px);
-
-}
-
-.footer p {
-
-    margin: 6px 0;
-}
-
-/* TAP EFFECT */
-
-.tap-effect-star {
-    position: fixed;
-    font-size: 15px;
-    pointer-events: none;
-    z-index: 9999;
-    animation: sparkle 0.9s ease forwards;
-    filter: drop-shadow(0 0 10px #7dff72);
-}
-
-.heart {
-    position: fixed;
-    font-size: 22px;
-    pointer-events: none;
-    z-index: 9999;
-    animation: pop 0.8s ease forwards;
-    filter: drop-shadow(0 0 8px rgba(255, 77, 109, .7));
-}
-
-@keyframes sparkle {
-
-    0% {
-        transform:
-            scale(.5) rotate(0deg);
-
-        opacity: 1;
-    }
-
-    100% {
-        transform:
-            scale(2) rotate(180deg) translateY(-20px);
-
-        opacity: 0;
-    }
-
-}
-
-@keyframes tapFade {
-
-    0% {
-        transform: scale(1);
-        opacity: 1;
-    }
-
-    100% {
-        transform: scale(3);
-        opacity: 0;
-    }
-}
-
-.cursor-spark {
-    position: fixed;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9999;
-
-    background:
-        radial-gradient(circle,
-            rgba(255, 105, 180, .9),
-            rgba(125, 255, 114, .4),
-            transparent);
-
-    animation: sparkMove .8s forwards;
-
-    mix-blend-mode: screen;
-}
-
-@keyframes sparkMove {
-
-    0% {
-        transform:
-            scale(.4);
-        opacity: 1;
-    }
-
-    100% {
-        transform:
-            scale(2.8) translateY(-20px);
-        opacity: 0;
     }
 
 }

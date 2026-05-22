@@ -1,4 +1,6 @@
-/* RESET SCROLL */
+/* =========================
+   RESET SCROLL
+========================= */
 
 if ('scrollRestoration' in history) {
 
@@ -10,13 +12,15 @@ window.addEventListener('load', () => {
 
   setTimeout(() => {
 
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
 
-  },10);
+  }, 10);
 
 });
 
-/* FADE UP */
+/* =========================
+   FADE UP
+========================= */
 
 const fadeElements =
 document.querySelectorAll('.fade-up');
@@ -38,7 +42,9 @@ window.addEventListener('scroll', () => {
 
 });
 
-/* LOADING */
+/* =========================
+   LOADING
+========================= */
 
 window.addEventListener('load', () => {
 
@@ -49,60 +55,120 @@ window.addEventListener('load', () => {
 
     loader.classList.add('hide');
 
-  },1200);
+  }, 1200);
 
 });
 
-/* CURSOR EFFECT */
-
-document.addEventListener('touchstart',(e)=>{
-
-  const x = e.touches[0].clientX;
-  const y = e.touches[0].clientY;
-
-  const spark =
-  document.createElement('div');
-
-  spark.className =
-  'cursor-spark';
-
-  spark.style.left = x + 'px';
-  spark.style.top = y + 'px';
-
-  document.body.appendChild(spark);
-
-  setTimeout(()=>{
-
-    spark.remove();
-
-  },800);
-
-});
-
-/* ✨ FLOATING STARS */
+/* =========================
+   HERO STARS
+========================= */
 
 const starsContainer =
 document.querySelector('.stars');
 
-for(let i = 0; i < 40; i++){
+if(starsContainer){
 
-  const star =
-  document.createElement('div');
+  for(let i = 0; i < 40; i++){
 
-  star.classList.add('star');
+    const star =
+    document.createElement('div');
 
-  star.style.top =
-  Math.random() * 100 + '%';
+    star.classList.add('star');
 
-  star.style.left =
-  Math.random() * 100 + '%';
+    star.style.top =
+    Math.random() * 100 + '%';
 
-  star.style.animationDuration =
-  2 + Math.random() * 4 + 's';
+    star.style.left =
+    Math.random() * 100 + '%';
 
-  star.style.animationDelay =
-  Math.random() * 5 + 's';
+    star.style.animationDuration =
+    2 + Math.random() * 4 + 's';
 
-  starsContainer.appendChild(star);
+    star.style.animationDelay =
+    Math.random() * 5 + 's';
+
+    starsContainer.appendChild(star);
+
+  }
 
 }
+
+/* =========================
+   SPARK EFFECT
+========================= */
+
+document.addEventListener('touchstart', (e) => {
+
+  const x = e.touches[0].clientX;
+  const y = e.touches[0].clientY;
+
+  for(let i = 0; i < 8; i++){
+
+    const sparkle =
+    document.createElement('div');
+
+    sparkle.className = 'sparkle';
+
+    sparkle.style.left =
+    x + (Math.random() * 40 - 20) + 'px';
+
+    sparkle.style.top =
+    y + (Math.random() * 40 - 20) + 'px';
+
+    document.body.appendChild(sparkle);
+
+    setTimeout(() => {
+
+      sparkle.remove();
+
+    }, 900);
+
+  }
+
+});
+
+/* =========================
+   SOUND BUTTON
+========================= */
+
+const video =
+document.querySelector('.hero-video');
+
+const soundBtn =
+document.querySelector('.sound-btn');
+
+if(video && soundBtn){
+
+  video.muted = true;
+
+  soundBtn.addEventListener('click', () => {
+
+    video.muted = !video.muted;
+
+    soundBtn.textContent =
+    video.muted ? '🔇' : '🔊';
+
+  });
+
+}
+
+/* =========================
+   HERO PARALLAX
+========================= */
+
+window.addEventListener('scroll', () => {
+
+  const scrollY =
+  window.scrollY;
+
+  const heroVideo =
+  document.querySelector('.hero-video');
+
+  if(heroVideo){
+
+    heroVideo.style.transform =
+    `scale(1.05) translateY(${scrollY * 0.08}px)`;
+
+  }
+
+});

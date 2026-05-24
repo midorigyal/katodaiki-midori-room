@@ -1650,3 +1650,355 @@ body.archive-page .archive-word {
     }
 
 }
+
+/* ========================================
+   ARCHIVE BUTTON
+======================================== */
+
+.archive-btn-wrap {
+
+    text-align: center;
+
+    margin-top: 50px;
+}
+
+.archive-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 18px 34px;
+
+    border-radius: 999px;
+
+    text-decoration: none;
+
+    color: #111;
+
+    background: #7dff72;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    box-shadow:
+        0 0 24px rgba(125, 255, 114, .25);
+
+    transition: .35s;
+}
+
+.archive-btn:hover {
+
+    transform:
+        translateY(-6px) scale(1.03);
+
+    box-shadow:
+        0 0 34px rgba(125, 255, 114, .45);
+}
+
+/* ========================================
+   ARCHIVE HERO
+======================================== */
+
+body.archive-page .archive-hero {
+
+    padding: 180px 24px 100px;
+
+    text-align: center;
+
+    position: relative;
+}
+
+body.archive-page .archive-hero h1 {
+
+    font-size: 72px;
+
+    line-height: .95;
+
+    margin-bottom: 24px;
+}
+
+body.archive-page .archive-hero p {
+
+    color: #d8d8d8;
+
+    line-height: 2;
+}
+
+/* ========================================
+   ARCHIVE GRID
+======================================== */
+
+body.archive-page .archive-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 26px;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 0 22px 140px;
+}
+
+body.archive-page .archive-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 38px;
+
+    border-radius: 34px;
+
+    background:
+        rgba(20, 20, 20, .72);
+
+    backdrop-filter: blur(16px);
+
+    border:
+        1px solid rgba(255, 255, 255, .05);
+
+    transition: .4s;
+}
+
+body.archive-page .archive-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    border:
+        1px solid rgba(125, 255, 114, .25);
+
+    box-shadow:
+        0 0 30px rgba(125, 255, 114, .1);
+}
+
+body.archive-page .archive-number {
+
+    color: #7dff72;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 18px;
+}
+
+body.archive-page .archive-title {
+
+    font-size: 34px;
+
+    margin-bottom: 20px;
+}
+
+body.archive-page .archive-text {
+
+    line-height: 2;
+
+    color: #d8d8d8;
+}
+
+body.archive-page .archive-word {
+
+    position: absolute;
+
+    right: -10px;
+    bottom: -24px;
+
+    font-size: 90px;
+
+    font-weight: 900;
+
+    opacity: .05;
+
+    color: #7dff72;
+}
+
+/* ========================================
+   MIDORI EDIT
+======================================== */
+
+.section-midori-edit {
+
+    padding: 80px 22px 140px;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+.archive-main-title {
+
+    font-size: 56px;
+
+    line-height: 1.2;
+
+    margin-bottom: 24px;
+}
+
+.archive-sub {
+
+    color: #d8d8d8;
+
+    line-height: 2;
+
+    margin-bottom: 60px;
+}
+
+.edit-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 24px;
+}
+
+.edit-grid video {
+
+    width: 100%;
+
+    border-radius: 32px;
+
+    background: #111;
+
+    border:
+        1px solid rgba(255, 255, 255, .05);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, .45);
+
+    transition: .4s;
+}
+
+.edit-grid video:hover {
+
+    transform:
+        translateY(-6px) scale(1.01);
+
+    box-shadow:
+        0 0 24px rgba(125, 255, 114, .18);
+}
+
+/* ========================================
+   QUOTE
+======================================== */
+
+body.archive-page .quote {
+
+    padding: 0 30px 140px;
+
+    text-align: center;
+
+    max-width: 900px;
+
+    margin: auto;
+}
+
+body.archive-page .quote p {
+
+    font-size: 28px;
+
+    line-height: 2.2;
+
+    font-weight: 300;
+
+    color: #f3f3f3;
+}
+
+body.archive-page .quote span {
+
+    color: #7dff72;
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media(max-width:768px) {
+
+    body.archive-page .archive-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .edit-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    body.archive-page .archive-hero h1 {
+
+        font-size: 52px;
+    }
+
+    .archive-main-title {
+
+        font-size: 38px;
+    }
+
+    body.archive-page .quote p {
+
+        font-size: 22px;
+    }
+}
+
+body.archive-page .quote {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 0 24px 140px;
+}
+
+body.archive-page .quote p {
+
+    background:
+        rgba(20, 20, 20, .72);
+
+    border:
+        1px solid rgba(255, 255, 255, .05);
+
+    backdrop-filter: blur(16px);
+
+    border-radius: 28px;
+
+    padding: 30px;
+
+    font-size: 24px;
+
+    line-height: 1.8;
+
+    transition: .35s;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, .35);
+}
+
+body.archive-page .quote p:hover {
+
+    transform:
+        translateY(-4px);
+
+    border:
+        1px solid rgba(125, 255, 114, .25);
+
+    box-shadow:
+        0 0 24px rgba(125, 255, 114, .12);
+}

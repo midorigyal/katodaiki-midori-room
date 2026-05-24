@@ -1402,77 +1402,192 @@ body.archive-page .archive-word {
     color: #7dff72;
 }
 
-/* =========================
-   MIDORI EDIT VIDEO
-========================= */
+/* ========================================
+   MIDORI EDIT
+======================================== */
 
 .section-midori-edit {
-    padding: 80px 22px 140px;
+
+    padding: 120px 22px 160px;
 
     text-align: center;
 
-    max-width: 1200px;
+    max-width: 1300px;
 
     margin: auto;
 }
 
 .archive-mini {
+
     color: #7dff72;
 
     font-size: 11px;
 
-    letter-spacing: 4px;
+    letter-spacing: 5px;
 
     margin-bottom: 18px;
 }
 
 .archive-main-title {
-    font-size: 52px;
 
-    line-height: 1.2;
+    font-size: 64px;
+
+    line-height: 1.1;
 
     margin-bottom: 24px;
+
+    font-family: 'Anton', sans-serif;
 }
 
 .archive-sub {
+
     line-height: 2;
 
     color: #d8d8d8;
 
-    margin-bottom: 60px;
+    margin-bottom: 70px;
+
+    font-size: 15px;
 }
 
+/* GRID */
+
 .edit-grid {
+
     display: grid;
 
     grid-template-columns:
-        repeat(2, 1fr);
+        repeat(auto-fit, minmax(280px, 1fr));
 
-    gap: 24px;
+    gap: 28px;
 }
 
-.edit-grid video {
-    width: 100%;
+/* CARD */
 
-    border-radius: 30px;
+.edit-card {
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 34px;
+
+    background:
+        rgba(20, 20, 20, .72);
 
     border:
-        1px solid rgba(255, 255, 255, .05);
+        1px solid rgba(255, 255, 255, .06);
 
-    background: #111;
+    backdrop-filter: blur(14px);
+
+    transition: .45s;
 
     box-shadow:
         0 10px 30px rgba(0, 0, 0, .45);
-
-    transition: .4s;
 }
 
-.edit-grid video:hover {
+.edit-card:hover {
+
     transform:
-        translateY(-6px) scale(1.01);
+        translateY(-8px);
+
+    border:
+        1px solid rgba(125, 255, 114, .25);
 
     box-shadow:
-        0 0 24px rgba(125, 255, 114, .14);
+        0 0 30px rgba(125, 255, 114, .12);
+}
+
+/* VIDEO */
+
+.edit-card video {
+
+    width: 100%;
+
+    display: block;
+
+    aspect-ratio: 9/16;
+
+    object-fit: cover;
+}
+
+/* OVERLAY */
+
+.edit-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(to top,
+            rgba(0, 0, 0, .75),
+            rgba(0, 0, 0, 0));
+
+    display: flex;
+
+    align-items: flex-end;
+
+    padding: 24px;
+}
+
+/* TEXT */
+
+.edit-title {
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+    margin-bottom: 8px;
+}
+
+.edit-desc {
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    color: rgba(255, 255, 255, .78);
+}
+
+/* STICKER */
+
+.edit-sticker {
+
+    position: absolute;
+
+    top: 14px;
+    right: 14px;
+
+    background: #7dff72;
+
+    color: #111;
+
+    padding:
+        8px 14px;
+
+    border-radius: 999px;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    transform:
+        rotate(8deg);
+}
+
+/* MOBILE */
+
+@media(max-width:768px) {
+
+    .archive-main-title {
+
+        font-size: 42px;
+    }
+
 }
 
 /* =========================

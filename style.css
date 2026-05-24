@@ -387,6 +387,17 @@ h1 {
     display: block;
 }
 
+.photo video {
+
+    width: 100%;
+
+    display: block;
+
+    border-radius: 30px;
+
+    background: #000;
+}
+
 .photo::after {
 
     content: "MIDORI ROOM";
@@ -505,6 +516,8 @@ h1 {
 
     transform:
         rotate(-6deg);
+
+    z-index: 3;
 }
 
 .mini-tag.pink {
@@ -517,6 +530,41 @@ h1 {
 .green-tag {
 
     background: #7dff72;
+}
+
+/* =========================
+   VIDEO CARD
+========================= */
+
+.video-card {
+
+    position: relative;
+}
+
+.video-card::before {
+
+    content: "EDIT MOVIE";
+
+    position: absolute;
+
+    top: 16px;
+    right: 16px;
+
+    background:
+        rgba(255, 107, 203, .9);
+
+    color: white;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    padding:
+        8px 12px;
+
+    border-radius: 999px;
+
+    z-index: 3;
 }
 
 /* =========================
@@ -769,6 +817,89 @@ h1 {
     opacity: .05;
 
     color: #7dff72;
+}
+
+/* =========================
+   MIDORI EDIT
+========================= */
+
+.section-midori-edit {
+
+    padding:
+        60px 24px 140px;
+
+    text-align: center;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+.archive-mini {
+
+    color: #7dff72;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 18px;
+}
+
+.archive-main-title {
+
+    font-size: 52px;
+
+    line-height: 1.3;
+
+    margin-bottom: 24px;
+}
+
+.archive-sub {
+
+    line-height: 2;
+
+    color: #d8d8d8;
+
+    margin-bottom: 60px;
+}
+
+.edit-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 24px;
+}
+
+.edit-grid video {
+
+    width: 100%;
+
+    border-radius: 34px;
+
+    overflow: hidden;
+
+    background: #111;
+
+    border:
+        1px solid rgba(255, 255, 255, .06);
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, .45);
+
+    transition: .45s;
+}
+
+.edit-grid video:hover {
+
+    transform:
+        translateY(-8px) scale(1.02);
+
+    box-shadow:
+        0 0 30px rgba(125, 255, 114, .16);
 }
 
 /* =========================
@@ -1039,6 +1170,8 @@ h1 {
 
     .gallery {
 
+        column-count: 1;
+
         column-gap: 14px;
 
         padding:
@@ -1081,93 +1214,6 @@ h1 {
 
         font-size: 26px;
     }
-
-}
-
-/* =========================
-   MIDORI EDIT
-========================= */
-
-.section-midori-edit {
-
-    padding:
-        60px 24px 140px;
-
-    text-align: center;
-
-    max-width: 1200px;
-
-    margin: auto;
-}
-
-.archive-mini {
-
-    color: #7dff72;
-
-    font-size: 11px;
-
-    letter-spacing: 4px;
-
-    margin-bottom: 18px;
-}
-
-.archive-main-title {
-
-    font-size: 52px;
-
-    line-height: 1.3;
-
-    margin-bottom: 24px;
-}
-
-.archive-sub {
-
-    line-height: 2;
-
-    color: #d8d8d8;
-
-    margin-bottom: 60px;
-}
-
-.edit-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(2, 1fr);
-
-    gap: 24px;
-}
-
-.edit-grid video {
-
-    width: 100%;
-
-    border-radius: 34px;
-
-    overflow: hidden;
-
-    background: #111;
-
-    border:
-        1px solid rgba(255, 255, 255, .06);
-
-    box-shadow:
-        0 10px 40px rgba(0, 0, 0, .45);
-
-    transition: .45s;
-}
-
-.edit-grid video:hover {
-
-    transform:
-        translateY(-8px) scale(1.02);
-
-    box-shadow:
-        0 0 30px rgba(125, 255, 114, .16);
-}
-
-@media(max-width:768px) {
 
     .archive-main-title {
 

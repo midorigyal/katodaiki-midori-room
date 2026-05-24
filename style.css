@@ -13,7 +13,6 @@ html {
 }
 
 body {
-
     background:
         linear-gradient(180deg,
             #0b0b0b,
@@ -37,18 +36,14 @@ body {
 ========================= */
 
 .loader {
-
     position: fixed;
-
     inset: 0;
 
     background: #0b0b0b;
 
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     flex-direction: column;
 
     z-index: 9999;
@@ -57,16 +52,12 @@ body {
 }
 
 .loader.hide {
-
     opacity: 0;
-
     pointer-events: none;
 }
 
 .loader-logo {
-
     font-size: 48px;
-
     font-weight: 900;
 
     color: #7dff72;
@@ -74,34 +65,26 @@ body {
     text-shadow:
         0 0 18px rgba(125, 255, 114, .7);
 
-    animation:
-        pulse 1.8s infinite alternate;
+    animation: pulse 1.8s infinite alternate;
 }
 
 .loader-text {
-
     margin-top: 18px;
 
     font-size: 10px;
-
     letter-spacing: 5px;
 
-    color:
-        rgba(255, 255, 255, .55);
+    color: rgba(255, 255, 255, .55);
 }
 
 @keyframes pulse {
-
     from {
-
         transform: scale(1);
     }
 
     to {
-
         transform: scale(1.06);
     }
-
 }
 
 /* =========================
@@ -109,7 +92,6 @@ body {
 ========================= */
 
 .header {
-
     position: fixed;
 
     top: 0;
@@ -118,14 +100,12 @@ body {
     width: 100%;
 
     display: flex;
-
     justify-content: space-between;
     align-items: center;
 
     padding: 18px 20px;
 
-    background:
-        rgba(0, 0, 0, .35);
+    background: rgba(0, 0, 0, .35);
 
     backdrop-filter: blur(18px);
 
@@ -136,9 +116,7 @@ body {
 }
 
 .logo {
-
     font-size: 20px;
-
     font-weight: 900;
 
     letter-spacing: 5px;
@@ -156,13 +134,11 @@ body {
 @keyframes logoGlow {
 
     from {
-
         text-shadow:
             0 0 10px rgba(125, 255, 114, .5);
     }
 
     to {
-
         text-shadow:
             0 0 18px rgba(125, 255, 114, .9),
             0 0 28px rgba(125, 255, 114, .3);
@@ -171,14 +147,11 @@ body {
 }
 
 nav {
-
     display: flex;
-
     gap: 14px;
 }
 
 nav a {
-
     color: white;
 
     text-decoration: none;
@@ -191,7 +164,6 @@ nav a {
 }
 
 nav a:hover {
-
     opacity: 1;
 
     color: #ff6bcb;
@@ -205,7 +177,6 @@ nav a:hover {
 ========================= */
 
 .hero {
-
     position: relative;
 
     height: 100vh;
@@ -214,7 +185,6 @@ nav a:hover {
 }
 
 .hero-video {
-
     position: absolute;
 
     inset: 0;
@@ -230,7 +200,6 @@ nav a:hover {
 }
 
 .overlay {
-
     position: absolute;
 
     inset: 0;
@@ -248,7 +217,6 @@ nav a:hover {
 ========================= */
 
 .stars {
-
     position: absolute;
 
     inset: 0;
@@ -261,7 +229,6 @@ nav a:hover {
 }
 
 .star {
-
     position: absolute;
 
     width: 3px;
@@ -283,19 +250,15 @@ nav a:hover {
 @keyframes twinkle {
 
     0%, 100% {
-
         opacity: .2;
 
-        transform:
-            scale(.5);
+        transform: scale(.5);
     }
 
     50% {
-
         opacity: 1;
 
-        transform:
-            scale(1.5);
+        transform: scale(1.5);
     }
 
 }
@@ -305,7 +268,6 @@ nav a:hover {
 ========================= */
 
 .float-glitter {
-
     position: absolute;
 
     width: 2px;
@@ -329,7 +291,6 @@ nav a:hover {
 @keyframes floatLine {
 
     0% {
-
         transform:
             translateY(0px) rotate(12deg);
 
@@ -337,17 +298,14 @@ nav a:hover {
     }
 
     30% {
-
         opacity: .15;
     }
 
     70% {
-
         opacity: .3;
     }
 
     100% {
-
         transform:
             translateY(-80px) rotate(12deg);
 
@@ -361,7 +319,6 @@ nav a:hover {
 ========================= */
 
 .hero-content {
-
     position: absolute;
 
     left: 20px;
@@ -376,7 +333,6 @@ nav a:hover {
 @keyframes fadeUp {
 
     from {
-
         opacity: 0;
 
         transform:
@@ -384,7 +340,6 @@ nav a:hover {
     }
 
     to {
-
         opacity: 1;
 
         transform:
@@ -394,7 +349,6 @@ nav a:hover {
 }
 
 .mini {
-
     color: #7dff72;
 
     font-size: 11px;
@@ -405,7 +359,6 @@ nav a:hover {
 }
 
 h1 {
-
     font-family: 'Anton', sans-serif;
 
     font-size: 82px;
@@ -419,7 +372,6 @@ h1 {
 }
 
 .hero-sub {
-
     margin-top: 18px;
 
     color: #ff6bcb;
@@ -430,7 +382,6 @@ h1 {
 }
 
 .hero-text {
-
     margin-top: 20px;
 
     line-height: 1.9;
@@ -441,7 +392,6 @@ h1 {
 }
 
 .hero-buttons {
-
     display: flex;
 
     gap: 14px;
@@ -457,11 +407,9 @@ h1 {
 .sub-btn,
 .gallery-btn,
 .vote-main-btn {
-
     display: inline-block;
 
-    padding:
-        16px 30px;
+    padding: 16px 30px;
 
     border-radius: 999px;
 
@@ -475,7 +423,6 @@ h1 {
 .main-btn,
 .gallery-btn,
 .vote-main-btn {
-
     background: #7dff72;
 
     color: #111;
@@ -485,7 +432,6 @@ h1 {
 }
 
 .sub-btn {
-
     border:
         1px solid rgba(255, 255, 255, .12);
 
@@ -500,18 +446,14 @@ h1 {
 .main-btn:hover,
 .gallery-btn:hover,
 .vote-main-btn:hover {
-
-    transform:
-        translateY(-5px);
+    transform: translateY(-5px);
 
     box-shadow:
         0 0 24px rgba(125, 255, 114, .35);
 }
 
 .sub-btn:hover {
-
-    transform:
-        translateY(-5px);
+    transform: translateY(-5px);
 
     border:
         1px solid rgba(255, 107, 203, .25);
@@ -524,15 +466,12 @@ h1 {
 ========================= */
 
 .section {
-
     position: relative;
 
-    padding:
-        180px 20px;
+    padding: 180px 20px;
 }
 
 .section h2 {
-
     font-size: 58px;
 
     line-height: 1;
@@ -549,7 +488,6 @@ h1 {
 ========================= */
 
 .profile-layout {
-
     display: flex;
 
     flex-direction: column;
@@ -558,7 +496,6 @@ h1 {
 }
 
 .profile-image {
-
     position: relative;
 
     display: flex;
@@ -567,20 +504,17 @@ h1 {
 }
 
 .profile-image img {
-
     width: 72%;
 
     max-width: 280px;
 
     border-radius: 28px;
 
-    border:
-        10px solid white;
+    border: 10px solid white;
 
     background: white;
 
-    transform:
-        rotate(-4deg);
+    transform: rotate(-4deg);
 
     box-shadow:
         0 20px 50px rgba(0, 0, 0, .45);
@@ -589,7 +523,6 @@ h1 {
 }
 
 .profile-image img:hover {
-
     transform:
         rotate(-1deg) scale(1.03);
 }
@@ -599,7 +532,6 @@ h1 {
 ========================= */
 
 .doodle-star {
-
     position: absolute;
 
     top: -10px;
@@ -609,15 +541,13 @@ h1 {
 
     color: #ff6bcb;
 
-    transform:
-        rotate(12deg);
+    transform: rotate(12deg);
 
     text-shadow:
         0 0 15px rgba(255, 107, 203, .45);
 }
 
 .doodle-heart {
-
     position: absolute;
 
     bottom: 5%;
@@ -627,15 +557,13 @@ h1 {
 
     color: #7dff72;
 
-    transform:
-        rotate(-15deg);
+    transform: rotate(-15deg);
 
     text-shadow:
         0 0 14px rgba(125, 255, 114, .45);
 }
 
 .doodle-mini {
-
     position: absolute;
 
     right: 18%;
@@ -645,11 +573,9 @@ h1 {
 
     letter-spacing: 4px;
 
-    color:
-        rgba(255, 255, 255, .45);
+    color: rgba(255, 255, 255, .45);
 
-    transform:
-        rotate(5deg);
+    transform: rotate(5deg);
 }
 
 /* =========================
@@ -657,7 +583,6 @@ h1 {
 ========================= */
 
 .profile-info {
-
     display: flex;
 
     flex-direction: column;
@@ -666,14 +591,12 @@ h1 {
 }
 
 .profile-card {
-
     position: relative;
 
     background:
         rgba(20, 20, 20, .72);
 
-    backdrop-filter:
-        blur(16px);
+    backdrop-filter: blur(16px);
 
     padding: 34px;
 
@@ -688,9 +611,7 @@ h1 {
 }
 
 .profile-card:hover {
-
-    transform:
-        translateY(-6px);
+    transform: translateY(-6px);
 
     border:
         1px solid rgba(255, 107, 203, .2);
@@ -700,7 +621,6 @@ h1 {
 }
 
 .profile-card h3 {
-
     color: #ff6bcb;
 
     margin-bottom: 20px;
@@ -709,7 +629,6 @@ h1 {
 }
 
 .profile-basic {
-
     display: flex;
 
     flex-wrap: wrap;
@@ -718,12 +637,10 @@ h1 {
 }
 
 .profile-basic p {
-
     background:
         rgba(255, 255, 255, .04);
 
-    padding:
-        12px 18px;
+    padding: 12px 18px;
 
     border-radius: 999px;
 
@@ -737,14 +654,12 @@ h1 {
 ========================= */
 
 .mini-sticker {
-
     position: absolute;
 
     top: 18px;
     right: 18px;
 
-    padding:
-        8px 14px;
+    padding: 8px 14px;
 
     border-radius: 999px;
 
@@ -752,12 +667,10 @@ h1 {
 
     font-weight: bold;
 
-    transform:
-        rotate(10deg);
+    transform: rotate(10deg);
 }
 
 .mini-sticker.green {
-
     background: #7dff72;
 
     color: #111;
@@ -768,7 +681,6 @@ h1 {
 ========================= */
 
 .floating-tags {
-
     display: flex;
 
     flex-wrap: wrap;
@@ -779,13 +691,11 @@ h1 {
 }
 
 .floating-tags span {
-
     background: #7dff72;
 
     color: #111;
 
-    padding:
-        12px 18px;
+    padding: 12px 18px;
 
     border-radius: 999px;
 
@@ -797,43 +707,31 @@ h1 {
 }
 
 .floating-tags span:nth-child(1) {
-
-    transform:
-        rotate(-6deg);
+    transform: rotate(-6deg);
 }
 
 .floating-tags span:nth-child(2) {
-
-    transform:
-        rotate(4deg);
+    transform: rotate(4deg);
 }
 
 .floating-tags span:nth-child(3) {
-
-    transform:
-        rotate(-3deg);
+    transform: rotate(-3deg);
 }
 
 .floating-tags span:nth-child(4) {
-
-    transform:
-        rotate(5deg);
+    transform: rotate(5deg);
 }
 
 .floating-tags span:nth-child(5) {
-
-    transform:
-        rotate(-5deg);
+    transform: rotate(-5deg);
 }
 
 .floating-tags span:hover {
-
     background: #ff6bcb;
 
     color: white;
 
-    transform:
-        scale(1.05);
+    transform: scale(1.05);
 }
 
 /* =========================
@@ -841,7 +739,6 @@ h1 {
 ========================= */
 
 .favorite-points {
-
     display: flex;
 
     flex-wrap: wrap;
@@ -852,7 +749,6 @@ h1 {
 }
 
 .favorite-points span {
-
     font-size: 11px;
 
     letter-spacing: 3px;
@@ -865,7 +761,6 @@ h1 {
 ========================= */
 
 .blink-dot {
-
     position: absolute;
 
     width: 6px;
@@ -885,19 +780,15 @@ h1 {
 @keyframes blinkDot {
 
     0%, 100% {
-
         opacity: .2;
 
-        transform:
-            scale(.7);
+        transform: scale(.7);
     }
 
     50% {
-
         opacity: 1;
 
-        transform:
-            scale(1.5);
+        transform: scale(1.5);
     }
 
 }
@@ -907,7 +798,6 @@ h1 {
 ========================= */
 
 .movie-grid {
-
     display: flex;
 
     flex-direction: column;
@@ -916,7 +806,6 @@ h1 {
 }
 
 .movie-card {
-
     background:
         rgba(20, 20, 20, .72);
 
@@ -931,31 +820,26 @@ h1 {
 }
 
 .movie-card:hover {
-
-    transform:
-        translateY(-6px);
+    transform: translateY(-6px);
 }
 
 iframe {
-
     width: 100%;
 
-    aspect-ratio: 16/9;
+    aspect-ratio: 16 / 9;
 
     border: none;
 }
 
 .movie-card p {
-
     padding: 18px;
 }
 
 /* =========================
-   GALLERY
+   GALLERY PREVIEW
 ========================= */
 
 .gallery-preview {
-
     display: flex;
 
     flex-direction: column;
@@ -964,25 +848,21 @@ iframe {
 }
 
 .gallery-main-photo {
-
     position: relative;
 }
 
 .gallery-main-photo img {
-
     width: 100%;
 
     max-width: 340px;
 
-    border:
-        12px solid white;
+    border: 12px solid white;
 
     background: white;
 
     border-radius: 10px;
 
-    transform:
-        rotate(-3deg);
+    transform: rotate(-3deg);
 
     box-shadow:
         0 20px 40px rgba(0, 0, 0, .45);
@@ -991,17 +871,11 @@ iframe {
 }
 
 .gallery-main-photo img:hover {
-
     transform:
         rotate(-1deg) scale(1.02);
 }
 
-/* =========================
-   GALLERY STICKER
-========================= */
-
 .gallery-sticker {
-
     position: absolute;
 
     top: -14px;
@@ -1011,15 +885,13 @@ iframe {
 
     color: #ff6bcb;
 
-    transform:
-        rotate(15deg);
+    transform: rotate(15deg);
 
     text-shadow:
         0 0 14px rgba(255, 107, 203, .5);
 }
 
 .gallery-heart {
-
     position: absolute;
 
     bottom: 10px;
@@ -1029,12 +901,10 @@ iframe {
 
     color: #7dff72;
 
-    transform:
-        rotate(-12deg);
+    transform: rotate(-12deg);
 }
 
 .polaroid-note {
-
     position: absolute;
 
     bottom: 10px;
@@ -1052,7 +922,6 @@ iframe {
 ========================= */
 
 .mini-gallery {
-
     display: flex;
 
     gap: 16px;
@@ -1065,14 +934,12 @@ iframe {
 }
 
 .mini-photo {
-
     width: 92px;
     height: 120px;
 
     object-fit: cover;
 
-    border:
-        6px solid white;
+    border: 6px solid white;
 
     background: white;
 
@@ -1084,20 +951,15 @@ iframe {
     transition: .35s;
 }
 
-.rotate-left {
-
-    transform:
-        rotate(-6deg);
+.mini-photo.rotate-left {
+    transform: rotate(-6deg);
 }
 
-.rotate-right {
-
-    transform:
-        rotate(5deg);
+.mini-photo.rotate-right {
+    transform: rotate(5deg);
 }
 
 .mini-photo:hover {
-
     transform:
         rotate(0deg) scale(1.08);
 }
@@ -1107,7 +969,6 @@ iframe {
 ========================= */
 
 .about-card {
-
     background:
         rgba(20, 20, 20, .72);
 
@@ -1126,11 +987,9 @@ iframe {
 ========================= */
 
 .final-vote {
-
     position: relative;
 
-    padding:
-        180px 24px;
+    padding: 180px 24px;
 
     text-align: center;
 
@@ -1142,7 +1001,6 @@ iframe {
 }
 
 .vote-mini {
-
     color: #7dff72;
 
     font-size: 11px;
@@ -1153,7 +1011,6 @@ iframe {
 }
 
 .final-vote h2 {
-
     font-size: 48px;
 
     line-height: 1.5;
@@ -1162,7 +1019,6 @@ iframe {
 }
 
 .vote-text {
-
     line-height: 1.9;
 
     color: #d8d8d8;
@@ -1175,7 +1031,6 @@ iframe {
 ========================= */
 
 .footer {
-
     padding: 40px 20px;
 
     text-align: center;
@@ -1193,21 +1048,17 @@ iframe {
 ========================= */
 
 .fade-up {
-
     opacity: 0;
 
-    transform:
-        translateY(40px);
+    transform: translateY(40px);
 
     transition: 1s;
 }
 
 .fade-up.show {
-
     opacity: 1;
 
-    transform:
-        translateY(0);
+    transform: translateY(0);
 }
 
 /* =========================
@@ -1215,7 +1066,6 @@ iframe {
 ========================= */
 
 .glitter {
-
     position: fixed;
 
     width: 10px;
@@ -1233,7 +1083,6 @@ iframe {
 
 .glitter::before,
 .glitter::after {
-
     content: "";
 
     position: absolute;
@@ -1248,7 +1097,6 @@ iframe {
 }
 
 .glitter::before {
-
     width: 2px;
     height: 12px;
 
@@ -1257,7 +1105,6 @@ iframe {
 }
 
 .glitter::after {
-
     width: 12px;
     height: 2px;
 
@@ -1268,7 +1115,6 @@ iframe {
 @keyframes glitterAnim {
 
     0% {
-
         transform:
             scale(.3) rotate(0deg);
 
@@ -1276,12 +1122,10 @@ iframe {
     }
 
     30% {
-
         opacity: 1;
     }
 
     100% {
-
         transform:
             scale(1.8) rotate(25deg) translateY(-18px);
 
@@ -1291,287 +1135,30 @@ iframe {
 }
 
 /* =========================
-   PC
-========================= */
-
-@media(min-width:900px) {
-
-    .profile-layout {
-
-        flex-direction: row;
-
-        align-items: center;
-
-        gap: 80px;
-    }
-
-    .profile-image,
-    .profile-info {
-
-        flex: 1;
-    }
-
-}
-
-@media(max-width:768px) {
-
-    h1 {
-
-        font-size: 62px;
-    }
-
-    .section {
-
-        padding:
-            140px 20px;
-    }
-
-    .section h2 {
-
-        font-size: 44px;
-    }
-
-}
-
-/* =========================
-   GALLERY PAGE
-========================= */
-
-.gallery-hero {
-
-    padding:
-        140px 24px 80px;
-
-    text-align: center;
-}
-
-.gallery {
-
-    column-count: 2;
-
-    column-gap: 18px;
-
-    padding:
-        0 18px 120px;
-}
-
-.photo {
-
-    position: relative;
-
-    margin-bottom: 18px;
-
-    break-inside: avoid;
-
-    border-radius: 28px;
-
-    overflow: hidden;
-
-    background: #1a1a1a;
-
-    border:
-        1px solid rgba(255, 255, 255, .05);
-
-    box-shadow:
-        0 10px 30px rgba(0, 0, 0, .45);
-
-    transition: .45s;
-}
-
-.photo:hover {
-
-    transform:
-        translateY(-6px) scale(1.02);
-
-    box-shadow:
-        0 15px 40px rgba(0, 0, 0, .55),
-        0 0 24px rgba(125, 255, 114, .12);
-}
-
-.photo img {
-
-    width: 100%;
-
-    display: block;
-}
-
-.photo::after {
-
-    content: "MIDORI ROOM";
-
-    position: absolute;
-
-    bottom: 14px;
-    left: 14px;
-
-    font-size: 10px;
-
-    letter-spacing: 2px;
-
-    color: white;
-
-    background:
-        rgba(0, 0, 0, .35);
-
-    padding:
-        8px 12px;
-
-    border-radius: 999px;
-
-    backdrop-filter: blur(10px);
-}
-
-/* ROTATE */
-
-.rotate-left {
-
-    transform:
-        rotate(-2deg);
-}
-
-.rotate-right {
-
-    transform:
-        rotate(2deg);
-}
-
-/* STICKER */
-
-.photo-sticker {
-
-    position: absolute;
-
-    top: 10px;
-    right: 12px;
-
-    font-size: 28px;
-
-    color: #ff6bcb;
-
-    text-shadow:
-        0 0 14px rgba(255, 107, 203, .45);
-
-    transform:
-        rotate(12deg);
-}
-
-.photo-heart {
-
-    position: absolute;
-
-    bottom: 40px;
-    right: 14px;
-
-    font-size: 26px;
-
-    color: #7dff72;
-
-    transform:
-        rotate(-10deg);
-}
-
-.mini-star {
-
-    position: absolute;
-
-    top: 14px;
-    left: 14px;
-
-    font-size: 24px;
-
-    color: #7dff72;
-}
-
-.mini-tag {
-
-    position: absolute;
-
-    top: 14px;
-    left: 14px;
-
-    background: #ff6bcb;
-
-    color: white;
-
-    padding:
-        8px 12px;
-
-    border-radius: 999px;
-
-    font-size: 10px;
-
-    letter-spacing: 1px;
-
-    transform:
-        rotate(-8deg);
-}
-
-/* QUOTE */
-
-.quote {
-
-    padding:
-        0 30px 120px;
-
-    text-align: center;
-}
-
-.quote p {
-
-    font-size: 20px;
-
-    line-height: 2.2;
-
-    color: #f3f3f3;
-
-    font-weight: 300;
-}
-
-.quote span {
-
-    color: #7dff72;
-}
-
-/* FINAL */
-
-.gallery-final {
-
-    padding:
-        120px 24px;
-
-    text-align: center;
-}
-
-/* =========================
    GALLERY PAGE ONLY
 ========================= */
 
-.gallery-hero {
-
-    padding:
-        150px 24px 90px;
+body.gallery-page .gallery-hero {
+    padding: 150px 24px 90px;
 
     text-align: center;
 
     position: relative;
 }
 
-.gallery {
-
+body.gallery-page .gallery {
     column-count: 2;
 
     column-gap: 18px;
 
-    padding:
-        0 18px 120px;
+    padding: 0 18px 120px;
 
     max-width: 1200px;
 
     margin: auto;
 }
 
-.photo {
-
+body.gallery-page .photo {
     position: relative;
 
     margin-bottom: 18px;
@@ -1593,8 +1180,7 @@ iframe {
     transition: .45s;
 }
 
-.photo:hover {
-
+body.gallery-page .photo:hover {
     transform:
         translateY(-6px) scale(1.02);
 
@@ -1603,15 +1189,13 @@ iframe {
         0 0 24px rgba(125, 255, 114, .12);
 }
 
-.photo img {
-
+body.gallery-page .photo img {
     width: 100%;
 
     display: block;
 }
 
-.photo::after {
-
+body.gallery-page .photo::after {
     content: "MIDORI ROOM";
 
     position: absolute;
@@ -1628,36 +1212,326 @@ iframe {
     background:
         rgba(0, 0, 0, .35);
 
-    padding:
-        8px 12px;
+    padding: 8px 12px;
 
     border-radius: 999px;
 
     backdrop-filter: blur(10px);
 }
 
-/* ROTATE */
-
-.rotate-left {
-
-    transform:
-        rotate(-2deg);
+body.gallery-page .rotate-left {
+    transform: rotate(-2deg);
 }
 
-.rotate-right {
-
-    transform:
-        rotate(2deg);
+body.gallery-page .rotate-right {
+    transform: rotate(2deg);
 }
 
-/* STICKER */
-
-.photo-sticker {
-
+body.gallery-page .photo-sticker {
     position: absolute;
 
     top: 12px;
     right: 12px;
 
     font-size: 28px;
+
+    color: #ff6bcb;
+
+    text-shadow:
+        0 0 14px rgba(255, 107, 203, .45);
+
+    transform: rotate(12deg);
+}
+
+body.gallery-page .photo-heart {
+    position: absolute;
+
+    bottom: 40px;
+    right: 14px;
+
+    font-size: 26px;
+
+    color: #7dff72;
+
+    transform: rotate(-10deg);
+}
+
+body.gallery-page .mini-star {
+    position: absolute;
+
+    top: 14px;
+    left: 14px;
+
+    font-size: 24px;
+
+    color: #7dff72;
+}
+
+body.gallery-page .mini-tag {
+    position: absolute;
+
+    top: 14px;
+    left: 14px;
+
+    background: #ff6bcb;
+
+    color: white;
+
+    padding: 8px 12px;
+
+    border-radius: 999px;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    transform: rotate(-8deg);
+}
+
+body.gallery-page .quote {
+    padding: 0 30px 120px;
+
+    text-align: center;
+}
+
+body.gallery-page .quote p {
+    font-size: 20px;
+
+    line-height: 2.2;
+
+    color: #f3f3f3;
+
+    font-weight: 300;
+}
+
+body.gallery-page .quote span {
+    color: #7dff72;
+}
+
+body.gallery-page .gallery-final {
+    padding: 120px 24px;
+
+    text-align: center;
+}
+
+/* =========================
+   ARCHIVE PAGE ONLY
+========================= */
+
+body.archive-page .archive-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 24px;
+
+    padding: 0 22px 120px;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+body.archive-page .archive-card {
+    position: relative;
+
+    background:
+        rgba(20, 20, 20, .72);
+
+    backdrop-filter: blur(16px);
+
+    border-radius: 30px;
+
+    padding: 34px;
+
+    overflow: hidden;
+
+    border:
+        1px solid rgba(255, 255, 255, .05);
+
+    transition: .4s;
+}
+
+body.archive-page .archive-card:hover {
+    transform: translateY(-6px);
+
+    border:
+        1px solid rgba(125, 255, 114, .25);
+
+    box-shadow:
+        0 0 30px rgba(125, 255, 114, .1);
+}
+
+body.archive-page .archive-number {
+    color: #7dff72;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 16px;
+}
+
+body.archive-page .archive-title {
+    font-size: 32px;
+
+    margin-bottom: 18px;
+}
+
+body.archive-page .archive-text {
+    line-height: 2;
+
+    color: #d8d8d8;
+
+    font-size: 14px;
+}
+
+body.archive-page .archive-word {
+    position: absolute;
+
+    right: -10px;
+    bottom: -20px;
+
+    font-size: 72px;
+
+    font-weight: 900;
+
+    opacity: .05;
+
+    color: #7dff72;
+}
+
+/* =========================
+   MIDORI EDIT VIDEO
+========================= */
+
+.section-midori-edit {
+    padding: 80px 22px 140px;
+
+    text-align: center;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+.archive-mini {
+    color: #7dff72;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 18px;
+}
+
+.archive-main-title {
+    font-size: 52px;
+
+    line-height: 1.2;
+
+    margin-bottom: 24px;
+}
+
+.archive-sub {
+    line-height: 2;
+
+    color: #d8d8d8;
+
+    margin-bottom: 60px;
+}
+
+.edit-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 24px;
+}
+
+.edit-grid video {
+    width: 100%;
+
+    border-radius: 30px;
+
+    border:
+        1px solid rgba(255, 255, 255, .05);
+
+    background: #111;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, .45);
+
+    transition: .4s;
+}
+
+.edit-grid video:hover {
+    transform:
+        translateY(-6px) scale(1.01);
+
+    box-shadow:
+        0 0 24px rgba(125, 255, 114, .14);
+}
+
+/* =========================
+   PC
+========================= */
+
+@media(min-width:900px) {
+
+    .profile-layout {
+        flex-direction: row;
+
+        align-items: center;
+
+        gap: 80px;
+    }
+
+    .profile-image,
+    .profile-info {
+        flex: 1;
+    }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px) {
+
+    h1 {
+        font-size: 62px;
+    }
+
+    .section {
+        padding: 140px 20px;
+    }
+
+    .section h2 {
+        font-size: 44px;
+    }
+
+    body.gallery-page .gallery {
+        column-count: 1;
+
+        column-gap: 14px;
+
+        padding: 0 14px 100px;
+    }
+
+    body.archive-page .archive-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .edit-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .archive-main-title {
+        font-size: 34px;
+    }
+
 }

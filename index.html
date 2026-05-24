@@ -2,38 +2,489 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MIDORI ROOM</title>
 
-    <style>
-      body {
-        margin: 0;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: #0b0b0b;
-        color: white;
-        font-family: sans-serif;
-        text-align: center;
-      }
+    <title>KATO DAIKI MIDORI ROOM</title>
 
-      h1 {
-        color: #7dff72;
-        letter-spacing: 4px;
-      }
+    <!-- FONT -->
 
-      p {
-        opacity: 0.7;
-        margin-top: 20px;
-      }
-    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- JS -->
+
+    <script src="script.js" defer></script>
   </head>
 
   <body>
-    <div>
-      <h1>MIDORI ROOM</h1>
-      <p>ただいまメンテナンス中です ✨</p>
+    <!-- NOISE -->
+
+    <div class="noise"></div>
+
+    <!-- LOADING -->
+
+    <div class="loader">
+      <div class="loader-logo">MIDORI.</div>
+
+      <div class="loader-text">MIDORI ROOM</div>
     </div>
+
+    <!-- HEADER -->
+
+    <header class="header">
+      <div class="logo">MIDORI.</div>
+
+      <nav>
+        <a href="#profile"> PROFILE </a>
+
+        <a href="#movie"> MOVIE </a>
+
+        <a href="gallery.html"> GALLERY </a>
+
+        <a href="archive.html"> ARCHIVE </a>
+
+        <a href="vote.html"> VOTE </a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+
+    <section class="hero">
+      <!-- VIDEO -->
+
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="videos/hero.mp4" type="video/mp4" />
+      </video>
+
+      <!-- OVERLAY -->
+
+      <div class="overlay"></div>
+
+      <!-- STAR -->
+
+      <div class="stars"></div>
+
+      <!-- FLOAT LINE -->
+
+      <div class="float-line line1"></div>
+
+      <div class="float-line line2"></div>
+
+      <!-- FLOAT GLITTER -->
+
+      <div class="float-glitter" style="left: 8%; top: 60%"></div>
+
+      <div
+        class="float-glitter"
+        style="right: 12%; top: 20%; animation-delay: 2s"
+      ></div>
+
+      <div
+        class="float-glitter"
+        style="left: 42%; top: 16%; animation-delay: 4s"
+      ></div>
+
+      <!-- SOUND -->
+
+      <button class="sound-btn">🔇</button>
+
+      <!-- HERO LOOP -->
+
+      <div class="hero-loop-logo">MIDORI ROOM</div>
+
+      <!-- HERO CONTENT -->
+
+      <div class="hero-content">
+        <p class="mini">PRODUCE IDOL FAN SITE</p>
+
+        <h1>
+          KATO<br />
+          DAIKI
+        </h1>
+
+        <p class="hero-sub">MIDORI ROOM 🌱</p>
+
+        <p class="hero-text">
+          日プのギャル。<br />
+
+          上品さと中性的な魅力を持つ<br />
+
+          加藤大樹を全力応援中💚
+        </p>
+
+        <div class="hero-buttons">
+          <a class="main-btn" href="vote.html"> VOTE NOW </a>
+
+          <a class="sub-btn" href="#profile"> PROFILE </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFILE -->
+
+    <section id="profile" class="section">
+      <!-- FLOAT -->
+
+      <div class="blink-dot" style="top: 18%; right: 10%"></div>
+
+      <h2>PROFILE</h2>
+
+      <div class="profile-layout">
+        <!-- IMAGE -->
+
+        <div class="profile-image fade-up">
+          <img src="images/1.JPG" />
+
+          <!-- DOODLE -->
+
+          <div class="doodle-star">★</div>
+
+          <div class="doodle-heart">♡</div>
+
+          <div class="doodle-mini">MIDORI</div>
+        </div>
+
+        <!-- INFO -->
+
+        <div class="profile-info">
+          <!-- BASIC -->
+
+          <div class="profile-card fade-up">
+            <h3>BASIC</h3>
+
+            <div class="profile-basic">
+              <p>2004.10.08</p>
+
+              <p>AICHI</p>
+
+              <p>178cm</p>
+
+              <p>ENTP</p>
+            </div>
+
+            <!-- SMALL STICKER -->
+
+            <div class="mini-sticker green">green</div>
+          </div>
+
+          <!-- FAVORITE -->
+
+          <div class="profile-card fade-up">
+            <h3>FAVORITE</h3>
+
+            <p>趣味：衣装作り、メイク、緑色集め</p>
+
+            <p>特技：パフェ作り</p>
+
+            <!-- TAG -->
+
+            <div class="floating-tags">
+              <span> #愛されギャル </span>
+
+              <span> #努力家 </span>
+
+              <span> #表情管理 </span>
+
+              <span> #中性的 </span>
+
+              <span> #沼男子 </span>
+            </div>
+
+            <!-- SMALL POINT -->
+
+            <div class="favorite-points">
+              <span>VOICE</span>
+
+              <span>VISUAL</span>
+
+              <span>EYES</span>
+
+              <span>STYLE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MIDORI CORE -->
+
+    <section class="section midori-core">
+      <div class="blink-dot" style="top: 10%; left: 12%"></div>
+
+      <p class="section-mini">INSIDE MIDORI</p>
+
+      <h2>MIDORI CORE</h2>
+
+      <div class="core-grid">
+        <div class="core-card fade-up rotate-left">
+          <span>01</span>
+
+          <h3>負けず嫌い</h3>
+        </div>
+
+        <div class="core-card fade-up rotate-right">
+          <span>02</span>
+
+          <h3>仲間思い</h3>
+        </div>
+
+        <div class="core-card fade-up rotate-left">
+          <span>03</span>
+
+          <h3>表現力おばけ</h3>
+        </div>
+
+        <div class="core-card fade-up rotate-right">
+          <span>04</span>
+
+          <h3>中性的ビジュ</h3>
+        </div>
+
+        <div class="core-card fade-up rotate-left">
+          <span>05</span>
+
+          <h3>ギャップ</h3>
+        </div>
+
+        <div class="core-card fade-up rotate-right">
+          <span>06</span>
+
+          <h3>努力型</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- MOVIE -->
+
+    <section id="movie" class="section">
+      <h2>MOVIE 💚</h2>
+
+      <div class="movie-grid">
+        <div class="movie-card fade-up">
+          <iframe
+            src="https://www.youtube.com/embed/Wr1T3XZaMus"
+            title="YouTube video player"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+
+          <p>🎥 チッケム</p>
+        </div>
+
+        <div class="movie-card fade-up">
+          <iframe
+            src="https://www.youtube.com/embed/Z0PWG4F08JA"
+            title="YouTube video player"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+
+          <p>💚 グループバトル</p>
+        </div>
+
+        <div class="movie-card fade-up">
+          <iframe
+            src="https://www.youtube.com/embed/646FH20pfDk"
+            title="YouTube video player"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+
+          <p>✨ ポジション評価</p>
+        </div>
+
+        <div class="movie-card fade-up">
+          <iframe
+            src="https://www.youtube.com/embed/NS34w-fxrIM"
+            title="YouTube video player"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+
+          <p>🐈‍⬛ コンセプト評価</p>
+        </div>
+
+        <div class="movie-card fade-up">
+          <iframe
+            src="https://www.youtube.com/embed/1EYxHAgr5Yo"
+            title="YouTube video player"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+
+          <p>🌱 1 MIN PR動画</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MIDORI EDIT -->
+
+    <section class="section-midori-edit fade-up">
+      <p class="archive-mini">MIDORI EDIT</p>
+
+      <h2 class="archive-main-title">
+        MIDORI<br />
+        VIDEO ROOM
+      </h2>
+
+      <h3 class="archive-main-title">
+        23万人のフォロワーいる<br />
+        アカウント削除してまで挑んだ夢
+      </h3>
+      <p class="archive-sub">伝説のミドリのTikTok 🎬</p>
+
+      <div class="edit-grid">
+        <div class="edit-card">
+          <span class="edit-sticker"> LOVE </span>
+
+          <video src="videos/edit1.mp4" autoplay muted loop playsinline></video>
+
+          <div class="edit-overlay">
+            <div>
+              <p class="edit-title">Performance Edit</p>
+
+              <p class="edit-desc">圧倒的存在感と表現力。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="edit-card">
+          <span class="edit-sticker"> MIDORI </span>
+
+          <video src="videos/edit2.mp4" autoplay muted loop playsinline></video>
+
+          <div class="edit-overlay">
+            <div>
+              <p class="edit-title">Visual Edit</p>
+
+              <p class="edit-desc">ギャルミドリ全開🫶</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- GALLERY -->
+
+    <section id="gallery" class="section">
+      <h2>GALLERY 📸</h2>
+
+      <div class="gallery-preview fade-up">
+        <!-- MAIN PHOTO -->
+
+        <div class="gallery-main-photo">
+          <img src="images/2.JPG" />
+
+          <!-- STICKER -->
+
+          <div class="gallery-sticker">★</div>
+
+          <div class="gallery-heart">♡</div>
+
+          <!-- POLAROID TEXT -->
+
+          <div class="polaroid-note">MIDORI ROOM</div>
+        </div>
+
+        <!-- MINI PHOTO -->
+
+        <div class="mini-gallery">
+          <img src="images/3.JPG" class="mini-photo rotate-left" />
+
+          <img src="images/4.JPG" class="mini-photo rotate-right" />
+
+          <img src="images/5.JPG" class="mini-photo rotate-left" />
+        </div>
+
+        <a href="gallery.html" class="gallery-btn"> VIEW GALLERY → </a>
+      </div>
+    </section>
+
+    <!-- MIDORI ARCHIVE -->
+
+    <section class="section archive-entry">
+      <div class="blink-dot" style="bottom: 20%; left: 20%"></div>
+
+      <p class="section-mini">WORDS FROM MIDORI</p>
+
+      <h2>
+        MIDORI<br />
+
+        ARCHIVE
+      </h2>
+
+      <p class="archive-text">
+        「俺だけ見とけよ！」<br />
+
+        「運命のDestiny」<br />
+
+        ミドリの言葉を集めた展示空間。
+      </p>
+
+      <a href="archive.html" class="archive-btn"> ENTER ARCHIVE → </a>
+    </section>
+
+    <!-- ABOUT -->
+
+    <section class="section">
+      <h2>ABOUT PRODUCE101 JAPAN</h2>
+
+      <div class="about-card fade-up">
+        <p>
+          「PRODUCE 101 JAPAN」は、<br />
+
+          国民投票によって デビューメンバーが決まる 大型オーディション番組。
+
+          <br /><br />
+
+          これまでに JO1、INI、ME:I、 DXTEEN、IS:SUE などを輩出✨
+
+          <br /><br />
+
+          今回のシーズンでは、 101人の練習生の中から “12人”だけが
+          デビューすることができます。
+
+          <br /><br />
+
+          その夢に向かって 挑戦しているのが、 加藤大樹🌱
+        </p>
+      </div>
+    </section>
+
+    <!-- FINAL -->
+
+    <section class="final-vote">
+      <p class="vote-mini">DAILY VOTE</p>
+
+      <h2>
+        今日の1票で、<br />
+
+        加藤大樹の未来を<br />
+
+        応援しよう🌱
+      </h2>
+
+      <p class="vote-text">
+        Web投票 + Lemino投票で<br />
+
+        1日2票 応援できます💚
+      </p>
+
+      <a class="vote-main-btn" href="vote.html"> VOTE NOW → </a>
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+      <p>※当サイトは非公式ファンサイトです。</p>
+
+      <p>著作権は各権利者様に帰属します。</p>
+    </footer>
   </body>
 </html>

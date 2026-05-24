@@ -55,15 +55,11 @@ window.addEventListener('load', () => {
   const loader =
   document.querySelector('.loader');
 
-  if(loader){
+  setTimeout(() => {
 
-    setTimeout(() => {
+    loader.classList.add('hide');
 
-      loader.classList.add('hide');
-
-    }, 1200);
-
-  }
+  }, 1200);
 
 });
 
@@ -107,7 +103,7 @@ if(starsContainer){
 
 const createGlitter = (x, y) => {
 
-  for(let i = 0; i < 3; i++){
+  for(let i = 0; i < 4; i++){
 
     const glitter =
     document.createElement('div');
@@ -116,10 +112,10 @@ const createGlitter = (x, y) => {
     'glitter';
 
     glitter.style.left =
-    x + (Math.random() * 30 - 15) + 'px';
+    x + (Math.random() * 26 - 13) + 'px';
 
     glitter.style.top =
-    y + (Math.random() * 30 - 15) + 'px';
+    y + (Math.random() * 26 - 13) + 'px';
 
     glitter.style.transform =
     `rotate(${Math.random() * 360}deg)`;
@@ -130,7 +126,7 @@ const createGlitter = (x, y) => {
 
       glitter.remove();
 
-    }, 900);
+    }, 800);
 
   }
 
@@ -154,7 +150,7 @@ document.addEventListener('touchstart', (e) => {
 
 document.addEventListener('mousemove', (e) => {
 
-  if(Math.random() > 0.965){
+  if(Math.random() > 0.94){
 
     createGlitter(
       e.clientX,
@@ -206,18 +202,17 @@ window.addEventListener('scroll', () => {
   if(heroVideo){
 
     heroVideo.style.transform =
-    `scale(1.05)
-    translateY(${scrollY * 0.08}px)`;
+    `scale(1.05) translateY(${scrollY * 0.08}px)`;
 
   }
 
 });
 
 /* =========================
-   RANDOM NOISE DOT
+   RANDOM NOISE
 ========================= */
 
-for(let i = 0; i < 30; i++){
+for(let i = 0; i < 24; i++){
 
   const noise =
   document.createElement('div');
@@ -231,14 +226,14 @@ for(let i = 0; i < 30; i++){
   Math.random() * 100 + 'vh';
 
   noise.style.animationDuration =
-  2 + Math.random() * 5 + 's';
+  2 + Math.random() * 4 + 's';
 
   document.body.appendChild(noise);
 
 }
 
 /* =========================
-   RANDOM FLASH
+   RANDOM GLITTER FLASH
 ========================= */
 
 setInterval(() => {
@@ -263,24 +258,22 @@ setInterval(() => {
 
   }, 1200);
 
-}, 2400);
+}, 1800);
 
 /* =========================
-   FLOATING STICKERS
+   FLOATING MINI STICKER
 ========================= */
 
 const stickers =
 
 document.querySelectorAll(
-
-  '.gallery-sticker, .photo-heart, .mini-star'
-
+  '.gallery-sticker, .gallery-heart'
 );
 
 stickers.forEach(sticker => {
 
   let randomRotate =
-  Math.random() * 8 - 4;
+  Math.random() * 6 - 3;
 
   sticker.animate(
 
@@ -297,8 +290,8 @@ stickers.forEach(sticker => {
       {
 
         transform:
-        `translateY(-10px)
-        rotate(${randomRotate + 4}deg)`
+        `translateY(-8px)
+        rotate(${randomRotate + 3}deg)`
 
       }
 
@@ -307,13 +300,13 @@ stickers.forEach(sticker => {
     {
 
       duration:
-      2600 + Math.random() * 1800,
+      2500 + Math.random() * 1500,
 
-      iterations: Infinity,
+      iterations:Infinity,
 
-      direction: 'alternate',
+      direction:'alternate',
 
-      easing: 'ease-in-out'
+      easing:'ease-in-out'
 
     }
 
@@ -328,7 +321,7 @@ stickers.forEach(sticker => {
 const cards =
 document.querySelectorAll(
 
-  '.profile-card, .movie-card, .photo'
+  '.profile-card, .movie-card'
 
 );
 
@@ -339,8 +332,6 @@ cards.forEach(card => {
     'mousemove',
 
     (e) => {
-
-      if(window.innerWidth < 768) return;
 
       const rect =
       card.getBoundingClientRect();
@@ -358,17 +349,17 @@ cards.forEach(card => {
       rect.height / 2;
 
       const rotateY =
-      (x - centerX) / 28;
+      (x - centerX) / 22;
 
       const rotateX =
-      -(y - centerY) / 28;
+      -(y - centerY) / 22;
 
       card.style.transform =
 
-      `perspective(900px)
+      `perspective(800px)
       rotateX(${rotateX}deg)
       rotateY(${rotateY}deg)
-      translateY(-8px)`;
+      translateY(-6px)`;
 
     }
 
@@ -380,7 +371,9 @@ cards.forEach(card => {
 
     () => {
 
-      card.style.transform = '';
+      card.style.transform =
+
+      'perspective(800px) rotateX(0) rotateY(0)';
 
     }
 
@@ -404,24 +397,12 @@ miniPhotos.forEach(photo => {
     () => {
 
       const random =
-      Math.random() * 10 - 5;
+      Math.random() * 8 - 4;
 
       photo.style.transform =
 
       `rotate(${random}deg)
       scale(1.08)`;
-
-    }
-
-  );
-
-  photo.addEventListener(
-
-    'mouseleave',
-
-    () => {
-
-      photo.style.transform = '';
 
     }
 
@@ -462,141 +443,5 @@ if(hero){
     }
 
   );
-
-}
-
-/* =========================
-   FLOATING PHOTO EFFECT
-========================= */
-
-const photos =
-document.querySelectorAll('.photo');
-
-photos.forEach((photo, index) => {
-
-  photo.animate(
-
-    [
-
-      {
-
-        transform:
-        `translateY(0px)`
-
-      },
-
-      {
-
-        transform:
-        `translateY(-10px)`
-
-      }
-
-    ],
-
-    {
-
-      duration:
-      3500 + (index * 400),
-
-      direction: 'alternate',
-
-      iterations: Infinity,
-
-      easing: 'ease-in-out'
-
-    }
-
-  );
-
-});
-
-/* =========================
-   RANDOM SPARKLE
-========================= */
-
-setInterval(() => {
-
-  const sparkle =
-  document.createElement('div');
-
-  sparkle.className =
-  'sparkle';
-
-  sparkle.style.left =
-  Math.random() * 100 + 'vw';
-
-  sparkle.style.top =
-  Math.random() * 100 + 'vh';
-
-  document.body.appendChild(sparkle);
-
-  setTimeout(() => {
-
-    sparkle.remove();
-
-  }, 1800);
-
-}, 1600);
-
-/* =========================
-   SCROLL PARALLAX
-========================= */
-
-window.addEventListener('scroll', () => {
-
-  const scrollY =
-  window.scrollY;
-
-  const galleryHero =
-  document.querySelector('.gallery-hero');
-
-  if(galleryHero){
-
-    galleryHero.style.transform =
-
-    `translateY(${scrollY * 0.08}px)`;
-
-  }
-
-});
-
-/* =========================
-   RANDOM PHOTO ROTATION
-========================= */
-
-const randomPhotos =
-document.querySelectorAll('.photo');
-
-randomPhotos.forEach(photo => {
-
-  const randomRotate =
-  Math.random() * 4 - 2;
-
-  photo.style.rotate =
-  `${randomRotate}deg`;
-
-});
-
-/* =========================
-   LOGO GLOW
-========================= */
-
-const logo =
-document.querySelector('.logo');
-
-if(logo){
-
-  setInterval(() => {
-
-    logo.classList.add('logo-flash');
-
-    setTimeout(() => {
-
-      logo.classList.remove('logo-flash');
-
-    }, 700);
-
-  }, 5000);
 
 }

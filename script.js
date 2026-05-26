@@ -368,29 +368,39 @@ randomPhotos.forEach((photo) => {
 });
 
 /* =========================================
-   MIDORI EDIT VIDEO AUTOPLAY FIX
+   MIDORI EDIT VIDEO FIX
 ========================================= */
 
 const editVideos =
   document.querySelectorAll(".edit-card video");
 
 editVideos.forEach((video) => {
-  video.muted = true;
-  video.loop = true;
-  video.playsInline = true;
 
-  const playPromise = video.play();
+  /* 初期状態 */
 
-  if (playPromise !== undefined) {
-    playPromise.catch(() => {});
-  }
-});
-document.querySelectorAll('video').forEach(video => {
+  video.pause();
 
   video.currentTime = 0;
 
+  video.muted = false;
+
+  video.loop = false;
+
+  video.autoplay = false;
+
+  video.controls = true;
+
+  video.playsInline = true;
+
+  /* 再生終了したら最初に戻す */
+
+  video.addEventListener("ended", () => {
+
+    video.currentTime = 0;
+
+  });
+
 });
-video.pause();
 /* =========================================
    ARCHIVE QUOTE RANDOM FLOAT
 ========================================= */

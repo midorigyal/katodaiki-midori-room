@@ -743,11 +743,23 @@ iframe {
     font-size: 110px;
     font-family: "Anton", sans-serif;
 
-    color: rgba(255, 255, 255, .03);
+    color: rgba(125, 255, 114, .10);
+
+    text-shadow:
+        0 0 30px rgba(125, 255, 114, .18);
 
     white-space: nowrap;
 
     pointer-events: none;
+
+    z-index: 0;
+}
+
+.midori-edit-section>*:not(.edit-bg-text) {
+
+    position: relative;
+
+    z-index: 2;
 }
 
 .edit-main-copy {

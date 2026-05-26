@@ -385,7 +385,12 @@ editVideos.forEach((video) => {
     playPromise.catch(() => {});
   }
 });
+document.querySelectorAll('video').forEach(video => {
 
+  video.currentTime = 0;
+
+});
+video.pause();
 /* =========================================
    ARCHIVE QUOTE RANDOM FLOAT
 ========================================= */

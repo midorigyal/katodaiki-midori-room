@@ -1034,3 +1034,455 @@ body.archive-page .quote p:nth-child(even)::before {
     }
 
 }
+
+/* ========================================
+   FIX PATCH
+   最後に追加する
+======================================== */
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.back {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 22px;
+
+    border-radius: 999px;
+
+    text-decoration: none;
+
+    color: white;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    background: rgba(255, 255, 255, .06);
+
+    border: 1px solid rgba(255, 255, 255, .08);
+
+    backdrop-filter: blur(10px);
+
+    transition: .35s;
+}
+
+.back:hover {
+    transform: translateY(-3px);
+
+    color: #111;
+
+    background: #7dff72;
+
+    box-shadow:
+        0 0 20px rgba(125, 255, 114, .35);
+}
+
+/* =========================
+   ARCHIVE HERO
+========================= */
+
+body.archive-page .gallery-hero {
+    padding: 180px 24px 100px;
+
+    text-align: center;
+
+    position: relative;
+}
+
+body.archive-page .gallery-hero h1 {
+    font-family: 'Anton', sans-serif;
+
+    font-size: 82px;
+
+    line-height: .9;
+
+    color: white;
+
+    text-shadow:
+        0 0 24px rgba(125, 255, 114, .15);
+}
+
+/* MEMORY ROOM文字崩れ修正 */
+
+body.archive-page .gallery-hero h1 br {
+    display: block;
+}
+
+/* =========================
+   MIDORI CORE
+========================= */
+
+.midori-core .core-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(160px, 1fr));
+
+    gap: 20px;
+
+    margin-top: 60px;
+}
+
+.midori-core .core-card {
+    position: relative;
+
+    padding: 34px 20px;
+
+    border-radius: 28px;
+
+    background:
+        rgba(20, 20, 20, .72);
+
+    border:
+        1px solid rgba(255, 255, 255, .06);
+
+    backdrop-filter: blur(14px);
+
+    overflow: hidden;
+
+    transition: .35s;
+
+    text-align: center;
+}
+
+.midori-core .core-card:hover {
+    transform:
+        translateY(-6px) rotate(-1deg);
+
+    border:
+        1px solid rgba(125, 255, 114, .25);
+
+    box-shadow:
+        0 0 24px rgba(125, 255, 114, .12);
+}
+
+.midori-core .core-card span {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: #7dff72;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+}
+
+.midori-core .core-card h3 {
+    font-size: 24px;
+
+    line-height: 1.4;
+}
+
+/* mobile崩れ修正 */
+
+@media(max-width:768px) {
+
+    .midori-core .core-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .midori-core .core-card {
+        padding: 26px 14px;
+    }
+
+    .midori-core .core-card h3 {
+        font-size: 18px;
+    }
+
+}
+
+/* =========================
+   MIDORI EDIT
+========================= */
+
+/* 重複レイアウトを強制上書き */
+
+.section-midori-edit {
+    padding: 140px 22px !important;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+.edit-grid {
+    display: grid !important;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 28px;
+
+    margin-top: 60px;
+}
+
+.edit-card {
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 34px;
+
+    background:
+        rgba(20, 20, 20, .72);
+
+    border:
+        1px solid rgba(255, 255, 255, .06);
+
+    transition: .4s;
+}
+
+.edit-card:hover {
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 0 28px rgba(125, 255, 114, .12);
+}
+
+.edit-card video {
+    width: 100%;
+
+    height: 640px;
+
+    display: block;
+
+    object-fit: cover;
+
+    background: #111;
+}
+
+.edit-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    padding: 24px;
+
+    background:
+        linear-gradient(to top,
+            rgba(0, 0, 0, .82),
+            rgba(0, 0, 0, 0));
+}
+
+.edit-title {
+    font-size: 22px;
+
+    font-weight: 800;
+
+    margin-bottom: 6px;
+}
+
+.edit-desc {
+    color: rgba(255, 255, 255, .75);
+
+    line-height: 1.7;
+}
+
+/* mobile */
+
+@media(max-width:768px) {
+
+    .edit-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .edit-card video {
+        height: 520px;
+    }
+
+}
+
+/* =========================
+   ARCHIVE QUOTE
+========================= */
+
+body.archive-page .quote {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 24px;
+
+    max-width: 920px;
+
+    margin: auto;
+
+    padding: 0 24px 140px;
+}
+
+body.archive-page .quote p {
+    position: relative;
+
+    background:
+        linear-gradient(135deg,
+            rgba(30, 30, 30, .92),
+            rgba(18, 18, 18, .82));
+
+    border:
+        1px solid rgba(255, 255, 255, .06);
+
+    border-radius: 34px;
+
+    padding: 34px;
+
+    font-size: 26px;
+
+    line-height: 1.8;
+
+    font-weight: 700;
+
+    overflow: hidden;
+
+    transition: .35s;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, .35);
+}
+
+body.archive-page .quote p::before {
+    content: "★";
+
+    position: absolute;
+
+    top: 14px;
+    right: 18px;
+
+    color: #ff6bcb;
+
+    font-size: 20px;
+}
+
+body.archive-page .quote p:nth-child(even)::before {
+    content: "♡";
+
+    color: #7dff72;
+}
+
+body.archive-page .quote p:hover {
+    transform:
+        translateY(-6px) rotate(-1deg);
+
+    border:
+        1px solid rgba(125, 255, 114, .25);
+
+    box-shadow:
+        0 0 30px rgba(125, 255, 114, .12);
+}
+
+/* =========================
+   VIDEO FIX
+========================= */
+
+video {
+    opacity: 1 !important;
+
+    visibility: visible !important;
+}
+
+/* =========================
+   MOBILE HERO FIX
+========================= */
+
+@media(max-width:768px) {
+
+    body.archive-page .gallery-hero h1 {
+        font-size: 54px;
+    }
+
+}
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.back-btn {
+
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px 22px;
+
+    border-radius: 999px;
+
+    text-decoration: none;
+
+    color: white;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    font-weight: 700;
+
+    background:
+        rgba(255, 255, 255, .06);
+
+    border:
+        1px solid rgba(255, 255, 255, .08);
+
+    backdrop-filter: blur(14px);
+
+    transition: .35s;
+
+    overflow: hidden;
+}
+
+.back-btn::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(120deg,
+            transparent,
+            rgba(125, 255, 114, .12),
+            transparent);
+
+    transform: translateX(-100%);
+
+    transition: .6s;
+}
+
+.back-btn:hover::before {
+
+    transform: translateX(100%);
+}
+
+.back-btn:hover {
+
+    transform:
+        translateY(-4px);
+
+    border:
+        1px solid rgba(125, 255, 114, .25);
+
+    color: #7dff72;
+
+    box-shadow:
+        0 0 24px rgba(125, 255, 114, .15);
+}
+
+.back-btn span {
+
+    font-size: 14px;
+}

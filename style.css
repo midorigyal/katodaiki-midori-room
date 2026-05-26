@@ -1323,3 +1323,138 @@ body.gallery-page .photo img {
     }
 
 }
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 3;
+
+    background-image:
+        radial-gradient(rgba(255, 255, 255, .16) 1px,
+            transparent 1px);
+
+    background-size: 6px 6px;
+
+    mix-blend-mode: screen;
+
+    animation:
+        glitterMove 8s linear infinite;
+
+    opacity: .28;
+}
+
+@keyframes glitterMove {
+
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-80px);
+    }
+}
+
+.pixel-stars {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+.pixel-star {
+
+    position: absolute;
+
+    width: 4px;
+    height: 4px;
+
+    background: #fff;
+
+    image-rendering: pixelated;
+
+    box-shadow:
+        4px 0 #fff,
+        -4px 0 #fff,
+        0 4px #fff,
+        0 -4px #fff;
+
+    animation:
+        pixelTwinkle 2s infinite alternate;
+}
+
+@keyframes pixelTwinkle {
+
+    from {
+        opacity: .15;
+        transform: scale(.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.4);
+    }
+}
+
+.pixel-heart {
+    position: fixed;
+
+    font-size: 18px;
+
+    font-weight: 900;
+
+    z-index: 30;
+
+    pointer-events: none;
+
+    animation:
+        blinkHeart 1.2s infinite alternate;
+
+    text-shadow:
+        0 0 12px currentColor;
+}
+
+.heart1 {
+    top: 18%;
+    left: 6%;
+    color: #ff6bcb;
+}
+
+.heart2 {
+    top: 52%;
+    right: 8%;
+    color: #7dff72;
+
+    animation-delay: .6s;
+}
+
+.heart3 {
+    bottom: 14%;
+    left: 14%;
+    color: white;
+
+    animation-delay: 1s;
+}
+
+@keyframes blinkHeart {
+
+    from {
+        opacity: .2;
+        transform: scale(.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.25);
+    }
+}
